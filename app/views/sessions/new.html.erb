@@ -1,0 +1,18 @@
+<section class="col-lg-4 col-lg-offset-4"> 
+  <section id="login-box">
+    <h2>Sign in</h2>
+    <%= form_tag sessions_path do %>
+      <label>Email:</label><br />
+      <%= text_field_tag :email, params[:email], style: "margin-left: none" %>
+      <br>
+      <br>
+      <label>Password:</label><br />
+      <%= password_field_tag :password %>
+      <br>
+      <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+      <%= label_tag :remember_me, "Remember me", class: "remember-me-label" %>
+      <br>
+      <%= submit_tag "Sign in", class: "btn btn-primary" %>
+    <% end %>
+  </section>  
+</section> 

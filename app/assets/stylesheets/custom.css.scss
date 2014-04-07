@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic);
+
+/* pixel to em conversion function */
+$browser-context: 14; // Default
+ 
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+@mixin display_block_center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin circle {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+@mixin btn_radius {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+input[type=text], input[type="password"] {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 1px solid rgb(233,235,236);
+  padding: 6px 10px;
+  width: 100%;
+  &:focus {
+    outline: none;
+    border: 1px solid rgb(178,180,181);
+  }
+}
+#login-box {
+  border: 1px solid rgb(247,247,247);
+  padding: 20px;
+  margin-top: 100px;
+  max-width: 250px;
+  @include display_block_center;
+  h2 {
+    text-align: center;
+  }
+  form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input[type="submit"] {
+
+  }
+}
