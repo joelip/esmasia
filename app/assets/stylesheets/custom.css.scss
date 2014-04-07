@@ -24,6 +24,39 @@ $browser-context: 14; // Default
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 }
+
+#coming-soon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url('background.jpg');
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #4A89DC;
+    opacity: 0.6;
+  }
+  .col-lg-6 {
+    margin-top: 120px;
+  }
+  h2 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 12px;
+    text-shadow: 0 1px 2px #2C3E50;
+  }
+  p {
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 1px 2px #2C3E50;
+  }
+  img {
+    background-color: white;
+    @include display_block_center;
+  }
+}
 input[type=text], input[type="password"] {
   border-radius: 3px;
   -webkit-border-radius: 3px;

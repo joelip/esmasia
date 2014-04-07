@@ -1,10 +1,10 @@
-app = angular.module('sampleApp', ['ngResource', 'ngCookies', 'ngAnimate', 'routerModule', 'sampleControllers', 'sampleModels', 'sampleFilters', 'sampleServices', 'ui.bootstrap'])
+app = angular.module('esmTestPrep', ['ngResource', 'ngCookies', 'ngAnimate', 'routerModule', 'sampleControllers', 'sampleModels', 'sampleFilters', 'sampleServices', 'ui.bootstrap'])
 	.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
 		$locationProvider.html5Mode(true)
 		$httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
 		$stateProvider
-			.state('home', {
-				url: '/home',
-				controller: 'HomeCtrl'
+			.state('comingSoon', {
+				url: '/',
+				templateUrl: '<%= asset_path("templates/comingsoon.html") %>'
 			})
 	])
