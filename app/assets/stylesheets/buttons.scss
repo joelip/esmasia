@@ -1,0 +1,23 @@
+@import "mixins";
+@import "fonts";
+@import "color";
+
+.button-transparent, .button-blue {
+	padding: 16px 32px;
+	@include btn_radius;
+	font-size: 18px;
+	letter-spacing: 0.75px;
+	text-transform: uppercase;
+	font-family: 'NovecentoBook', sans-serif;
+	border: 0;
+}
+.button-transparent {
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+}
+.button-blue {
+	background-color: $bf_blue_jeans_light;
+	border: 2px solid $bf_blue_jeans_light;
+	color: white;
+}

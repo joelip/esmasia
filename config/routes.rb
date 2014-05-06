@@ -11,4 +11,6 @@ Esmtestprep::Application.routes.draw do
   get '/sign_out', to: 'sessions#destroy', as: 'sign_out'
   get '/home', to: 'static_pages#coming_soon'
 
+  get '/demo', to: 'static_pages#demo'
+
 end

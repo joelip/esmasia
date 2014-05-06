@@ -1,0 +1,53 @@
+@import "fonts";
+@import "bourbon";
+
+#welcome-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('background.jpg');
+	.logo-round {
+		$logo-size: 80px;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		height: $logo-size;
+		width: $logo-size;
+	}
+	.presentation-container {
+		margin-left: 10%;
+		margin-top: 12.5%;
+		width: 900px;
+
+		.welcome-title {
+			font-size: 60px;
+			font-weight: 600;
+			letter-spacing: 1.5px;
+			color: white;
+		}
+		.title-description {
+			color: white;
+			font-size: 24px;
+			letter-spacing: 0.75px;
+			text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+		}
+		.button-container {
+			.button-transparent, .button-blue {
+				margin-right: 8px;
+				.ion-chevron-right {
+					font-size: 20px;
+					@include transform(translate(0,1px));
+					margin-right: 16px;
+					@include transition(transform 0.2s ease-in);
+				}
+				&:hover {
+					.ion-chevron-right {
+						@include transform(translate(6px,1px));
+					}
+				}
+			}
+		}
+	}
+}
