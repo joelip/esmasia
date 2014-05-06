@@ -1,5 +1,6 @@
 @import "fonts";
 @import "bourbon";
+@import "animations";
 
 #welcome-page {
 	position: absolute;
@@ -15,6 +16,7 @@
 		left: 30px;
 		height: $logo-size;
 		width: $logo-size;
+		@include animation(fadeIn 0.5s ease-in-out);
 	}
 	.presentation-container {
 		margin-left: 10%;
@@ -26,14 +28,17 @@
 			font-weight: 600;
 			letter-spacing: 1.5px;
 			color: white;
+			@include animation(fadeInLeft 0.5s ease-in-out);
 		}
 		.title-description {
 			color: white;
 			font-size: 24px;
 			letter-spacing: 0.75px;
 			text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+			@include animation(fadeInLeft 0.5s ease-in-out);
 		}
 		.button-container {
+			@include animation(fadeInRight 0.5s ease-in-out);
 			.button-transparent, .button-blue {
 				margin-right: 8px;
 				.ion-chevron-right {
