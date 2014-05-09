@@ -7,5 +7,9 @@ class StaticPagesController < ApplicationController
 	def demo
 
 	end
+
+	def classes
+
+	end
 	
 end

@@ -1,0 +1,94 @@
+@import "bourbon";
+@import "mixins";
+@import "color";
+
+#class-selection {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('background.jpg');
+	.page-title {
+		color: white;
+		font-weight: 300;
+		margin-top: 0;
+		margin-bottom: 0;
+		position: absolute;
+		top: 42px;
+		left: 125px;
+		font-size: 48px;
+		letter-spacing: 2px;
+		text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	}
+	.class-choice-container	{
+		margin-top: 135px;
+		width: 100%;
+		.class-selection {
+			padding: 24px;
+			position: relative;
+			@include display_block_center;
+			height: 500px;
+			width: 375px;
+			background-color: rgba(230,233,237,0.85);
+			.class-title {
+				font-size: 18px;
+				color: $dark_grey;
+			}
+			.location-head {
+				height: 75px;
+				.location-circle {
+					$circle-size: 75px;
+					@include circle($circle-size);
+					background-color: $bf_grapefruit;
+					margin-right: 12px;
+					.ion-location {
+						color: white;
+						font-size: 36px;
+						width: $circle-size;
+						line-height: $circle-size;
+						text-align: center;
+						vertical-align: middle;
+					}
+				}
+				.address {
+					font-family: 'NovecentoDemiBold', sans-serif;
+					text-transform: uppercase;
+					font-size: 14px;
+				}
+			}
+			.class-choice-body {
+				
+				.class-dates {
+					font-size: 36px;
+					color: $dark_grey;
+					font-weight: 600;
+				}
+				.line-box-classes {
+					border: 1.5px solid $dark_grey;
+					width: 100px;
+					margin-bottom: 24px;
+				}
+				.class-description {
+					color: $med_dark_grey;
+					font-size: 14px;
+					margin-bottom: 36px;
+				}
+			}
+			.class-choice-footer {
+				.class-title {
+					margin-right: 4px;
+				}
+				.price {
+					font-weight: 700;
+					color: #7FFF15;
+					text-shadow: $bf_dark_grass;
+				}
+				.button-enroll {
+					margin-top: 16px;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

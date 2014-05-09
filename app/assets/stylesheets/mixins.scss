@@ -4,10 +4,12 @@
   margin-right: auto;
 }
 
-@mixin circle {
+@mixin circle($diameter) {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+  height: $diameter;
+  width: $diameter;
 }
 
 @mixin btn_radius {

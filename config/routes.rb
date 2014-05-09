@@ -12,5 +12,6 @@ Esmtestprep::Application.routes.draw do
   get '/home', to: 'static_pages#coming_soon'
 
   get '/demo', to: 'static_pages#demo'
+  get '/demo/classes', to: 'static_pages#classes'
 
 end

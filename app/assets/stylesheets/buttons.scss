@@ -26,3 +26,22 @@
 	border: 2px solid $bf_blue_jeans_light;
 	color: white;
 }
+.button-enroll {
+	display: block;
+	color: white;
+	background-color: $bf_light_mint;
+	border-bottom: 4px solid $bf_dark_mint;
+	@include btn_radius;
+	height: 70px;
+	width: 100%;
+	line-height: 68px;
+	font-size: 24px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'NovecentoDemiBold', sans-serif;
+	cursor: pointer;
+	&:hover {
+		text-decoration: none;
+		color: white;
+	}
+}

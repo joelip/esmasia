@@ -12,14 +12,6 @@
 	width: 100%;
 	height: 100%;
 	background-image: url('background.jpg');
-	.logo-round {
-		$logo-size: 80px;
-		position: absolute;
-		top: 30px;
-		left: 30px;
-		height: $logo-size;
-		width: $logo-size;
-	}
 	.presentation-container {
 		margin-left: 10%;
 		margin-top: 12.5%;
@@ -67,7 +59,7 @@
 		@include display_block_center;
 		padding: 40px;
 		width: 400px;
-		height: 500px;
+		height: 575px;
 		background-color: $light_grey;
 		.mentor-model-title {
 			font-size: 24px;
@@ -101,7 +93,7 @@
 				.empty-circle {
 					position: relative;
 					@include display_block_center;
-					@include circle;
+					@include circle($circle-size);
 					height: $circle-size;
 					width: $circle-size;
 					.ion-arrow-graph-up-right,
@@ -258,7 +250,7 @@
 				.filled-circle {
 					position: relative;
 					@include display_block_center;
-					@include circle;
+					@include circle($circle-size);
 					height: $circle-size;
 					width: $circle-size;
 					background-color: $bf_light_mint;
@@ -305,7 +297,7 @@
 	.offering-selection {
 		$circle-size: 400px;
 		.choice-circle {
-			@include circle;
+			@include circle($circle-size);
 			height: $circle-size;
 			width: $circle-size;
 			background-color: $med_light_grey;

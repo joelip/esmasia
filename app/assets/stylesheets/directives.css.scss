@@ -3,7 +3,7 @@
 
 $circle-size: 50px;
 .empty-circle {
-	@include circle;
+	@include circle($circle-size);
 	height: $circle-size;
 	width: $circle-size;
 	.ion-arrow-graph-up-right,
