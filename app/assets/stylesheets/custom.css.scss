@@ -1,6 +1,7 @@
 @import "bourbon";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic);
 @import "mixins";
+@import "color";
 /* pixel to em conversion function */
 $browser-context: 14; // Default
  
@@ -68,5 +69,25 @@ input[type=text], input[type="password"] {
   }
   input[type="submit"] {
 
+  }
+}
+
+.arrow-circle {
+  position: absolute;
+  z-index: 50px;
+  bottom: 16px;
+  left: calc(50% - 25px);
+  @include circle;
+  height: 50px;
+  width: 50px;
+  border: 2px solid $dark_grey;
+  .ion-chevron-down {
+    font-size: 24px;
+    width: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    color: $dark_grey;
+    @include transform(translateX(-2px));  
   }
 }

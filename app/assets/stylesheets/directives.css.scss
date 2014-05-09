@@ -1,0 +1,19 @@
+@import "color";
+@import "mixins";
+
+$circle-size: 50px;
+.empty-circle {
+	@include circle;
+	height: $circle-size;
+	width: $circle-size;
+	.ion-arrow-graph-up-right,
+	.ion-map,
+	.ion-android-map,
+	.ion-lightbulb {
+		position: relative;
+		width: $circle-size;
+		height: $circle-size;
+		line-height: $circle-size;
+		text-align: center;
+	}
+}

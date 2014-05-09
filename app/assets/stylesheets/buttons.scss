@@ -10,6 +10,11 @@
 	text-transform: uppercase;
 	font-family: 'NovecentoBook', sans-serif;
 	border: 0;
+	cursor: pointer;
+	&:hover {
+		text-decoration: none;
+		color: white;
+	}
 }
 .button-transparent {
 	background-color: transparent;

@@ -1,0 +1,19 @@
+app = angular.module('esmTestDirectives', [])
+
+app.directive 'scrollOnClick', ->
+  restrict: 'A',
+  link: (scope, element, attrs) ->
+    idToScroll = attrs.href
+    element.on('click', ->
+      if idToScroll
+        $target = $(idToScroll)
+      else
+        $target = element
+      $("body").velocity({scrollTop: $target.offset().top}, {duration: 1000});
+    )
+
+app.directive 'animateOnScroll', ->
+  restrict: 'A',
+  scope: {
+
+  }

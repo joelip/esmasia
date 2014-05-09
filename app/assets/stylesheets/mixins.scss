@@ -16,3 +16,11 @@
 	-moz-border-radius: 4px;
 	-ms-border-radius: 4px;
 }
+
+@mixin border-thick($color) {
+  border: 3px solid $color;
+}
+
+@mixin border-thin($color) {
+  border: 1.5px solid $color;
+}
