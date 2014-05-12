@@ -4,10 +4,6 @@ app.factory 'Stripe', ['$http', '$rootScope', '$timeout', ($http, $rootScope, $t
 
 	wrapper = {
 
-		fauxPayment: ->
-			$timeout( ->
-				$rootScope.$broadcast('success'), 1500)
-		,
 		createPayment: (customer) ->
 			
 			# define response handler for stripe
