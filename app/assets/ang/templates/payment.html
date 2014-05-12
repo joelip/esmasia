@@ -1,67 +1,71 @@
 <section class="modal-container" id="payment-container">
 	<div class="modal-background"></div>
-	<div class="registration-container">
-		<form name="testboost" class="row">
-			<div class="col-lg-6 left-registration">
-				<h3 class="registration-title">
-					Payment
-				</h3>
-				<p class="payment-info">
-					Payment is processed using a secure connction
-					via Stripe. Your payment will confirm your spot
-					in ESM’s SAT or ACT prep class. We do not store
-					your credit card information on our servers to
-					ensure that your payments are protected from
-					fraud. 
-				</p>
-				<div class="secure-container">
-					<div class="security-circle">
-						<i class="ion-locked"></i>
-					</div>
-					<p class="security-label">
-						secure connection
-					</p>
+	<div class="alert-container">
+		<p class="alert-text">
+			
+		</p>
+	</div>
+	<div class="registration-container" success-msg>
+		<div class="col-lg-6 left-registration">
+			<h3 class="registration-title">
+				Payment
+			</h3>
+			<p class="payment-info">
+				Payment is processed using a secure connction
+				via Stripe. Your payment will confirm your spot
+				in ESM’s SAT or ACT prep class. We do not store
+				your credit card information on our servers to
+				ensure that your payments are protected from
+				fraud. 
+			</p>
+			<div class="secure-container">
+				<div class="security-circle">
+					<i class="ion-locked"></i>
 				</div>
+				<p class="security-label">
+					secure connection
+				</p>
 			</div>
-			<div class="col-lg-6 right-registration">
-				<h3 class="registration-title">
-					Credit Card
-				</h3>
-				<form name="payment" ng-submit="createPayment()">
-					<label class="registration-label-right">
-						email (for receipt)
-					</label>
-					<br>
-					<input class="registration-input" placeholder="parent@esmcollege.com" ng-model="customer.email" required>
-					<label class="registration-label-right">
-						credit card number
-					</label>
-					<br>
-					<input class="registration-input" placeholder="1234 4567 8910 1234" required>
-					<div class="row grade-dob-input">
-						<div class="dob-group col-md-8">
-							<label class="registration-label-right dob-label">
-								expiration
-							</label>
-							<br>
-							<input class="registration-input" placeholder="MM/YYYY" ng-model="customer.expiration" required>
-						</div>
-						<div class="grade-group col-md-4">
-							<label class="registration-label-right grade-label">
-								cvc
-							</label>
-							<input class="registration-input" placeholder="&ast;&ast;&ast;&ast;" ng-model="customer.cvc" required>
-						</div>
+		</div>
+		<div class="col-lg-6 right-registration">
+			<h3 class="registration-title">
+				Credit Card
+			</h3>
+			<form ng-submit="submitCard()">
+				<label class="registration-label-right">
+					email (for receipt)
+				</label>
+				<br>
+				<input type="email" name="email" class="registration-input card-email" placeholder="parent@esmcollege.com" ng-model="customer.email" required>
+				<label class="registration-label-right">
+					credit card number
+				</label>
+				<br>
+				<input type="text" class="registration-input card-number" placeholder="1234 4567 8910 1234" required valid-card card-num="customer.card" ng-model="customer.card">
+				<div class="row grade-dob-input">
+					<div class="dob-group col-md-8">
+						<label class="registration-label-right dob-label">
+							expiration
+						</label>
+						<br>
+						<input type="text" class="registration-input card-month" placeholder="MM" ng-model="date.month" required>
+						<input type="text" class="registration-input card-year" placeholder="YYYY" ng-model="date.year" required vmonth="date.month" vyear="date.year" valid-date>
 					</div>
-					<p class="credit-card-info">
-						By clicking Confirm Payment, <span class="card-highlight">your card will 
-						be charged $499 dollars</span> and your child will be
-						enrolled in the course. Any
-						questions can be sent to <a href="mailto:info@esmcollege.com" style="color: #A8CEFF;">our support</a>.
-					</p>
-					<button type="button" class="button-payment" processing><i class="ion-chevron-right"></i> confirm payment <i class="ion-card"></i></button>
-				</form>
-			</div>
-		</form>
+					<div class="grade-group col-md-4">
+						<label class="registration-label-right grade-label">
+							cvc
+						</label>
+						<input type="text" class="registration-input card-cvc" placeholder="&ast;&ast;&ast;&ast;" ng-model="customer.cvc" valid-cvc v-cvc="customer.cvc" required>
+					</div>
+				</div>
+				<p class="credit-card-info">
+					By clicking Confirm Payment, <span class="card-highlight">your card will 
+					be charged $499 dollars</span> and your child will be
+					enrolled in the course. Any
+					questions can be sent to <a href="mailto:info@esmcollege.com" style="color: #A8CEFF;">our support</a>.
+				</p>
+				<button type="submit" class="button-payment" processing error-msg><i class="ion-chevron-right"></i> confirm payment <i class="ion-card"></i></button>
+			</form>
+		</div>
 	</div>
 </section>

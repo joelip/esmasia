@@ -21,8 +21,95 @@ app.directive 'processing', ['$rootScope', ($rootScope) ->
   restrict: 'A',
   link: (scope, element, attrs) ->
 
-    $rootScope.$on('processingPayment', ->
-      element.html('processing <i class="ion-refreshing></i>')
+    $rootScope.$on('processing', ->
+      element.css({
+        'background-color': '#5D9CEC',
+        'border-bottom': '4px solid #4A89DC'
+      })
+      element.html('processing <i class="ion-refreshing"></i>')
     )
     
 ]
+
+app.directive 'errorMsg', ['$rootScope', ($rootScope) ->
+  restrict: 'A',
+  link: (scope, element, attrs) ->
+
+    $rootScope.$on('paymentError', ->
+      element.css({
+        'background-color': '#ED5565',
+        'border-bottom': '4px solid #DA4453'
+      })
+      element.html('<i class="ion-alert-circled"></i> Error processing payment. Refresh page.')
+    )
+]
+
+app.directive 'successMsg', ['$rootScope', ($rootScope) ->
+  restrict: 'A',
+  link: (scope, element, attrs) ->
+
+    $rootScope.$on('successfulPayment', ->
+      $('.registration-container').replaceWith('
+        <div class="success-box">
+          <i class="ion-checkmark-circled"></i>
+          <p class="success-msg">Payment successfully processed. Email receipt sent.</p>
+        </div>
+      ')
+    )
+]
+
+# validation directives
+app.directive 'validDate', ['$rootScope', ($rootScope) ->
+  restrict: 'A',
+  scope: {
+    vmonth: '=',
+    vyear: '='
+  }
+  link: (scope, element, attrs) ->
+
+    element.on('blur', ->
+      if Stripe.card.validateExpiry(scope.vmonth, scope.vyear) is false
+        $('.card-year, .card-month').css({
+          'border': '2px solid #E9573F'  
+        })
+        alert "Please enter valid date."
+      else
+        $('.card-year, .card-month').css({
+          'border': '2px solid #B8D9FF'  
+        })
+    )
+]
+
+app.directive 'validCard', ->
+  restrict: 'A',
+  scope:
+    cardNum: '='
+  link: (scope, element, attrs) ->
+    element.on('blur', ->
+      if Stripe.card.validateCardNumber(scope.cardNum) is false
+        $('.card-number').css({
+          'border': '2px solid #E9573F'  
+        })
+        alert "Please enter valid card number."
+      else
+        $('.card-number').css({
+          'border': '2px solid #B8D9FF'  
+        })
+    )
+
+app.directive 'validCvc', ->
+  restrict: 'A',
+  scope:
+    vCvc: '='
+  link: (scope, element, attrs) ->
+    element.on('blur', ->
+      if Stripe.card.validateCVC(scope.vCvc) is false
+        $('.card-cvc').css({
+          'border': '2px solid #E9573F'  
+        })
+        alert "Please enter valid card cvc."
+      else
+        $('.card-cvc').css({
+          'border': '2px solid #B8D9FF'  
+        })
+    )

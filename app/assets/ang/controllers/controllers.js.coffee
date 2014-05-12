@@ -14,11 +14,14 @@ app.controller 'ClassSelectionCtrl', ['$scope', 'Enrollment', ($scope, Enrollmen
 
 ]
 
-app.controller 'PaymentCtrl', ['$scope', 'Stripe', '$rootScope', ($scope,
-  Stripe, $rootScope) ->
+app.controller 'PaymentCtrl', ['$scope', 'StripeCard', '$rootScope', ($scope,
+  StripeCard, $rootScope) ->
 
-  $scope.createPayment = ->
-    $rootScope.$broadcast('processingPayment')
-    Stripe.fauxPayment()
+  $scope.date = {}
+  $scope.customer = {}
+
+  $scope.submitCard = ->
+    $rootScope.$broadcast('processing')
+    StripeCard.createPayment($scope.customer, $scope.date)
 
 ]

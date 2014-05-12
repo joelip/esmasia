@@ -17,5 +17,6 @@ Esmtestprep::Application.routes.draw do
 
   # data routes
   post '/create_enrollment', to: 'enrollment#create_enrollment'
+  post '/create_payment', to: 'payments#create_payment'
 
 end

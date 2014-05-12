@@ -31,6 +31,7 @@ gem 'rolify'
 gem 'cancan'
 gem 'workflow'
 gem 'figaro'
+gem 'stripe'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'

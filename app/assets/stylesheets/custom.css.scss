@@ -18,6 +18,10 @@ $browser-context: 14; // Default
   width: $logo-size;
 }
 
+.input-error {
+  border: 2px solid $bf_orange_red;
+}
+
 .links-container {
   position: relative;
   float: right;
