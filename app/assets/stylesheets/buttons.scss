@@ -1,3 +1,4 @@
+@import "bourbon";
 @import "mixins";
 @import "fonts";
 @import "color";
@@ -29,16 +30,68 @@
 .button-enroll {
 	display: block;
 	color: white;
-	background-color: $bf_light_mint;
-	border-bottom: 4px solid $bf_dark_mint;
+	background-color: $bf_aqua_light;
+	border: 0;
+	border-bottom: 4px solid $bf_aqua_dark;
 	@include btn_radius;
 	height: 70px;
 	width: 100%;
 	line-height: 68px;
 	font-size: 24px;
 	vertical-align: middle;
-	text-align: center;
 	font-family: 'NovecentoDemiBold', sans-serif;
+	cursor: pointer;
+	&:hover {
+		text-decoration: none;
+		color: white;
+	}
+}
+.button-payment {
+	position: relative;
+	padding: 18px 30px;
+	font-family: "NovecentoDemiBold", sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	text-transform: uppercase;
+	color: white;
+	text-align: left;
+	border: 0;
+	width: 100%;
+	border-radius: 4px;
+	background-color: $bf_light_grass;
+	border-bottom: 4px solid $bf_dark_grass;
+	.ion-chevron-right {
+		margin-right: 8px;
+		font-size: 20px;
+		@include transform(translateY(2px));
+		@include transition(transform 0.1s linear);
+	}
+	.ion-card {
+		position: absolute;
+		top: 21px;
+		right: 30px;
+		font-size: 30px;
+		line-height: 16px;
+	}
+	&:hover .ion-chevron-right {
+		@include transform(translate(4px,2px));
+	}
+}
+.button-request {
+	display: block;
+	color: white;
+	background-color: $bf_light_yellow;
+	border: 0;
+	border-bottom: 4px solid $bf_medium_yellow;
+	@include btn_radius;
+	height: 70px;
+	width: 100%;
+	text-align: center;
+	line-height: 68px;
+	font-size: 24px;
+	vertical-align: middle;
+	font-family: 'NovecentoDemiBold', sans-serif;
+	text-shadow: 1px 1px $bf_medium_yellow;
 	cursor: pointer;
 	&:hover {
 		text-decoration: none;

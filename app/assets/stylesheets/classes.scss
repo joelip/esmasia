@@ -1,6 +1,7 @@
 @import "bourbon";
 @import "mixins";
 @import "color";
+@import "modals";
 
 #class-selection {
 	position: absolute;
@@ -25,7 +26,7 @@
 		margin-top: 135px;
 		width: 100%;
 		.class-selection {
-			padding: 24px;
+			padding: 36px;
 			position: relative;
 			@include display_block_center;
 			height: 500px;
@@ -44,7 +45,7 @@
 					margin-right: 12px;
 					.ion-location {
 						color: white;
-						font-size: 36px;
+						font-size: 48px;
 						width: $circle-size;
 						line-height: $circle-size;
 						text-align: center;
@@ -53,8 +54,10 @@
 				}
 				.address {
 					font-family: 'NovecentoDemiBold', sans-serif;
-					text-transform: uppercase;
-					font-size: 14px;
+					font-size: 16px;
+					position: absolute;
+					top: 52px;
+					left: 132px;
 				}
 			}
 			.class-choice-body {
@@ -72,7 +75,10 @@
 				.class-description {
 					color: $med_dark_grey;
 					font-size: 14px;
-					margin-bottom: 36px;
+					margin-bottom: 24px;
+				}
+				.red {
+					color: $bf_orange_red;
 				}
 			}
 			.class-choice-footer {
@@ -87,6 +93,10 @@
 				.button-enroll {
 					margin-top: 16px;
 					width: 100%;
+					text-align: center;
+				}
+				.button-request {
+					margin-top: 16px;
 				}
 			}
 		}

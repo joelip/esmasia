@@ -17,4 +17,9 @@ app = angular.module('esmTestPrep', ['ngResource', 'ngCookies', 'ngAnimate', 'ro
 				templateUrl: '<%= asset_path("templates/classes.html") %>',
 				controller: 'ClassSelectionCtrl'	
 			})
+			.state('payment', {
+				url: '/demo/payment',
+				templateUrl: '<%= asset_path("templates/payment.html") %>',
+				controller: 'PaymentCtrl'	
+			})
 	])

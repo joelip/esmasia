@@ -12,8 +12,7 @@ app.directive 'scrollOnClick', ->
       $("body").velocity({scrollTop: $target.offset().top}, {duration: 1000});
     )
 
-app.directive 'animateOnScroll', ->
-  restrict: 'A',
-  scope: {
-
-  }
+app.directive 'tbModal', ['$rootScope', ($rootScope) ->
+  restrict: 'EA',
+  templateUrl: '<%= asset_path("templates/directives/testbooster.modal.html") %>'
+]

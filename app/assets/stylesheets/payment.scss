@@ -1,0 +1,48 @@
+@import "bourbon";
+@import "color";
+@import "mixins";
+
+#payment-container {
+	.payment-info {
+		font-size: 16px;
+		color: $dark_grey;
+	}
+	.secure-container {
+		margin-top: 50px;
+		.security-circle {
+			$circle: 75px;
+			@include circle($circle);
+			@include display_block_center;
+			background-color: $bf_light_orange;
+			.ion-locked {
+				width: $circle;
+				line-height: $circle;
+				text-align: center;
+				vertical-align: middle;
+				color: white;
+				font-size: 36px;
+			}
+		}
+	}
+	.security-label {
+		margin-top: 8px;
+		font-family: "NovecentoDemiBold", sans-serif;
+		font-size: 18px;
+		color: white;
+		text-align: center;
+		letter-spacing: 0.5px;
+	}
+	.registration-input {
+		@include placeholder {
+			color: #6B8CBC;
+		}
+	}
+	.credit-card-info {
+		margin-top: 16px;
+		margin-bottom: 16px;
+		color: #6B8CBC;
+	}
+	.card-highlight {
+		color: $snapchat_light;
+	}
+}

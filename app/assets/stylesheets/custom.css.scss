@@ -18,6 +18,21 @@ $browser-context: 14; // Default
   width: $logo-size;
 }
 
+.links-container {
+  position: relative;
+  float: right;
+  padding: 46px 30px;
+  .nav-link {
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    display: inline;
+    font-size: 18px;
+    font-family: "NovecentoBook", sans-serif;
+    letter-spacing: 1px;
+    margin-left: 24px;
+  }
+}
+
 #coming-soon {
   position: absolute;
   height: 100%;

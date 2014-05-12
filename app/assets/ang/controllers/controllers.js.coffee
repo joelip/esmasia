@@ -9,4 +9,6 @@ app.controller 'StaticHomeCtrl', ['$scope', '$state', ($scope, $state) ->
 
 app.controller 'ClassSelectionCtrl', ['$scope', ($scope) ->
 
+	
+
 ]

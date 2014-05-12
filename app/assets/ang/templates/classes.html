@@ -1,9 +1,15 @@
+<section tb-modal ng-show="showRegistration == true">
+	
+</section>
 <section id="class-selection">
 	<nav class="static-nav">
 		<img class="logo-round" src="/assets/esm_round_logo.png">
-		<h1 class="page-title">
-			Summer Classes
-		</h1>
+		<h2 class="page-title">Summer Classes</h2>
+		<div class="links-container">
+			<a ui-sref="demo" class="nav-link">home</a>
+			<a ui-sref="classes" class="nav-link">classes</a>
+			<a href="" class="nav-link">private tutoring</a>
+		</div>
 	</nav>
 	<div class="class-choice-container">
 		<div class="col-lg-4">
@@ -12,11 +18,11 @@
 					<div class="location-circle">
 						<i class="ion-location"></i>
 					</div>
-<!-- 					<span class="address">
-						50 fullerton Ct
+					<span class="address">
+						50 fullerton ct
 						<br>
-						Sacramento, CA 95825
-					</span> -->
+						sacramento, ca 95825
+					</span>
 				</header>
 				<div class="class-choice-body">
 					<h3 class="class-dates">
@@ -39,7 +45,7 @@
 						Enrollment fee: 
 						<span class="price">$0</span>
 					</h6>
-					<a class="button-enroll">enroll in this class</a>
+					<a href="mailto:info@esmcollege.com" class="button-request">request information</a>
 				</footer>
 			</div>
 		</div>
@@ -49,34 +55,35 @@
 					<div class="location-circle">
 						<i class="ion-location"></i>
 					</div>
-<!-- 					<span class="address">
-						50 fullerton Ct
+					<span class="address">
+						50 fullerton ct
 						<br>
-						Sacramento, CA 95825
-					</span> -->
+						sacramento, ca 95825
+					</span>
 				</header>
 				<div class="class-choice-body">
 					<h3 class="class-dates">
-						Most Saturdays
+						June 9-13, 2014
 					</h3>
 					<div class="line-box-classes"></div>
 					<h6 class="class-title">
-						Proctored SAT/ACT Exam
+						June ACT Crash Course
 					</h6>
 					<p class="class-description">
-						Every Saturday from 9am to 1pm, ESM will
-						be hosting a free proctored SAT/ACT or SAT
-						Subject test for all enrolled students. Tests
-						come with a free score analysis and printout
-						of your student’s results.
+						Looking to prepare for the June 14th ACT?
+						This course is designed as a crash course
+						to help you prepare and increase your chances
+						of maximizing your score in time for the test. 
+						<span class="red">Monday-Friday,
+						9:00am to 12:00pm daily.</span>
 					</p>
 				</div>
 				<footer class="class-choice-footer">
 					<h6 class="class-title">
 						Enrollment fee: 
-						<span class="price">$0</span>
+						<span class="price">$499</span>
 					</h6>
-					<a class="button-enroll">enroll in this class</a>
+					<a ng-click="showRegistration = !showRegistration" class="button-enroll">enroll in this class</a>
 				</footer>
 			</div>
 		</div>
@@ -86,26 +93,26 @@
 					<div class="location-circle">
 						<i class="ion-location"></i>
 					</div>
-<!-- 					<span class="address">
-						50 fullerton Ct
+					<span class="address">
+						50 fullerton ct
 						<br>
-						Sacramento, CA 95825
-					</span> -->
+						sacramento, ca 95825
+					</span>
 				</header>
 				<div class="class-choice-body">
 					<h3 class="class-dates">
-						Most Saturdays
+						Select Saturdays
 					</h3>
 					<div class="line-box-classes"></div>
 					<h6 class="class-title">
-						Proctored SAT/ACT Exam
+						ESM Test Booster Seminar
 					</h6>
 					<p class="class-description">
-						Every Saturday from 9am to 1pm, ESM will
-						be hosting a free proctored SAT/ACT or SAT
-						Subject test for all enrolled students. Tests
-						come with a free score analysis and printout
-						of your student’s results.
+						On select saturdays, ESM will host free, one
+						hour lectures on specific topics related to 
+						the SAT and ACT. Topics covered: SAT Critical
+						Reading, Math and Writing; ACT Writing,
+						English, Reading and Science.
 					</p>
 				</div>
 				<footer class="class-choice-footer">
@@ -113,7 +120,7 @@
 						Enrollment fee: 
 						<span class="price">$0</span>
 					</h6>
-					<a class="button-enroll">enroll in this class</a>
+					<a href="mailto:info@esmcollege.com" class="button-request">request information</a>
 				</footer>
 			</div>
 		</div>
