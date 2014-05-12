@@ -15,4 +15,7 @@ Esmtestprep::Application.routes.draw do
   get '/demo/classes', to: 'static_pages#classes'
   get '/demo/payment', to: 'enrollment#payment_page'
 
+  # data routes
+  post '/create_enrollment', to: 'enrollment#create_enrollment'
+
 end

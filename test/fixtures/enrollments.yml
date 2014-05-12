@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student_full_name: MyString
+  student_high_school: MyString
+  dob: 2014-05-12 01:51:35
+  grade: MyString
+  student_mobile_number: MyString
+  student_email: MyString
+  parent_full_name: MyString
+  parent_email: MyString
+  home_address: MyString
+  city: MyString
+  state: MyString
+
+two:
+  student_full_name: MyString
+  student_high_school: MyString
+  dob: 2014-05-12 01:51:35
+  grade: MyString
+  student_mobile_number: MyString
+  student_email: MyString
+  parent_full_name: MyString
+  parent_email: MyString
+  home_address: MyString
+  city: MyString
+  state: MyString

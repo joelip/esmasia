@@ -14,5 +14,15 @@ app.directive 'scrollOnClick', ->
 
 app.directive 'tbModal', ['$rootScope', ($rootScope) ->
   restrict: 'EA',
-  templateUrl: '<%= asset_path("templates/directives/testbooster.modal.html") %>'
+  templateUrl: '<%= asset_path("templates/directives/registration.modal.html") %>'
+]
+
+app.directive 'processing', ['$rootScope', ($rootScope) ->
+  restrict: 'A',
+  link: (scope, element, attrs) ->
+
+    $rootScope.$on('processingPayment', ->
+      element.html('processing <i class="ion-refreshing></i>')
+    )
+    
 ]

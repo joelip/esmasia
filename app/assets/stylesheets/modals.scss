@@ -56,6 +56,9 @@
 			border: 2px solid #B8D9FF;
 			border-radius: 4px;
 			@include transition(border 0.5s);
+			@include placeholder {
+				color: #6B8CBC;
+			}
 			&:focus {
 				outline: none;
 				border: 2px solid #FFED24;
@@ -75,7 +78,7 @@
 				color: #556C88;
 			}
 			// make sure to do with input-group too
-			.dob-group {
+			.input-group {
 				display: inline;
 			}
 			.grade-group {
