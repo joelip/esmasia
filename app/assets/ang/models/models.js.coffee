@@ -18,7 +18,7 @@ app.factory 'Enrollment', ['$rootScope', '$http', '$window', ($rootScope, $http,
 
 			$http.post('/create_enrollment', enrollment)
 				.success ->
-					$window.location.href = '/demo/payment'
+					$window.location.href = '/classes/payment'
 				.error ->
 					alert "There was an error saving your enrollment. Recheck your entries, and 
 					refresh the page if needed."

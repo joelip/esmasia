@@ -32,6 +32,10 @@
 			height: 500px;
 			width: 375px;
 			background-color: rgba(230,233,237,0.85);
+			@include transition(background-color 0.1s linear);
+			&:hover {
+				background-color: rgb(230,233,237);	
+			}
 			.class-title {
 				font-size: 18px;
 				color: $dark_grey;
@@ -87,7 +91,7 @@
 				}
 				.price {
 					font-weight: 700;
-					color: #7FFF15;
+					color: $bf_light_grass;
 					text-shadow: $bf_dark_grass;
 				}
 				.button-enroll {
