@@ -18,6 +18,9 @@ class EnrollmentController < ApplicationController
 			student_high_school: params[:student_high_school],
 			student_mobile_number: params[:student_mobile_number]
 		)
+
+		EnrollmentMailer.registration_success(enrollment).deliver if enrollment
+
 		render nothing: true
 	end
 

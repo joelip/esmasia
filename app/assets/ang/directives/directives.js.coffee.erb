@@ -1,16 +1,23 @@
 app = angular.module('esmTestDirectives', [])
 
-app.directive 'scrollOnClick', ->
+app.directive 'scrollOnClick', ['$location', '$anchorScroll', ($location, $anchorScroll) ->
+  restrict: 'A',
+  scope:
+    anchor: '='
+  link: (scope, element, attrs) ->
+    element.on('click', ->
+      $location.hash(attrs.scrollOnClick)
+      $anchorScroll()
+    )
+]
+
+app.directive 'reloadLink', ['$window', ($window) ->
   restrict: 'A',
   link: (scope, element, attrs) ->
-    idToScroll = attrs.href
     element.on('click', ->
-      if idToScroll
-        $target = $(idToScroll)
-      else
-        $target = element
-      $("body").velocity({scrollTop: $target.offset().top}, {duration: 1000});
+      $window.location.href = attrs.href
     )
+]
 
 app.directive 'tbModal', ['$rootScope', ($rootScope) ->
   restrict: 'EA',
@@ -53,6 +60,7 @@ app.directive 'successMsg', ['$rootScope', ($rootScope) ->
         <div class="success-box">
           <i class="ion-checkmark-circled"></i>
           <p class="success-msg">Payment successfully processed. Email receipt sent.</p>
+          <a href="/" class="success-home-link" reload-link>back to home</a>
         </div>
       ')
     )

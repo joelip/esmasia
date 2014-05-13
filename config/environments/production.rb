@@ -19,6 +19,29 @@ Esmtestprep::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+  
+  # Add the fonts path
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+  # Precompile additional assets
+  config.assets.precompile += %w( .svg .eot .woff .ttf )
+
+  config.action_mailer.default_url_options = { :host => 'heroku.com' }
+  # ActionMailer Config
+  # Setup for production - deliveries, no errors raised
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.mandrillapp.com",
+    :port      => 587,
+    :user_name => ENV["MANDRILL_USERNAME"],
+    :password  => ENV["MANDRILL_API_KEY"],
+    :domain    => 'heroku.com',
+    :authentication => :plain
+  }
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH

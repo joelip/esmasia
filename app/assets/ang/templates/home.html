@@ -2,9 +2,9 @@
 	<nav class="static-nav">
 		<img class="logo-round" src="/assets/esm_round_logo.png">
 		<div class="links-container">
-			<a ui-sref="demo" class="nav-link">home</a>
+			<a ui-sref="home" class="nav-link">home</a>
 			<a ui-sref="classes" class="nav-link">classes</a>
-			<a href="" class="nav-link">private tutoring</a>
+<!-- 			<a href="" class="nav-link">private tutoring</a> -->
 		</div>
 	</nav>
 	<div class="presentation-container">
@@ -16,8 +16,8 @@
 			With test scores playing a vital role in college asmissions, find out more about how ESM can help your student achieve powerful results.
 		</p>
 		<div class="button-container">
-			<a href="#mentorship-model" scroll-on-click class="button-transparent"><i class="ion-chevron-right"></i> learn about ESM</a>
-			<a href="#esm-offerings" class="button-blue" scroll-on-click><i class="ion-chevron-right"></i> see our offerings</a>
+			<a scroll-on-click="mentorship-model" class="button-transparent"><i class="ion-chevron-right"></i> learn about ESM</a>
+			<a scroll-on-click="esm-offerings" class="button-blue"><i class="ion-chevron-right"></i> see our offerings</a>
 		</div>
 	</div>
 </section>
@@ -99,7 +99,7 @@
 		</div>
 		<img src="sat_book.png" class="sat-book">
 	</div>
-	<a href="#location-container" class="arrow-circle pulse">
+	<a scroll-on-click="location-container" class="arrow-circle pulse">
 		<i class="ion-chevron-down"></i>
 	</a>
 </section>
@@ -180,7 +180,7 @@
 			</ul>
 		</div>
 	</div>
-	<a href="#esm-offerings" class="arrow-circle pulse">
+	<a scroll-on-click="esm-offerings" class="arrow-circle pulse">
 		<i class="ion-chevron-down"></i>
 	</a>
 </section>

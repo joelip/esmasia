@@ -86,5 +86,11 @@
 			text-align: center;
 			@include animation(slideUp 0.5s ease-in);
 		}
+		.success-home-link {
+			text-align: center;
+			width: 100%;
+			@include display_block_center;
+			@include animation(slideUp 0.5s ease-in);
+		}
 	}
 }

@@ -4,11 +4,6 @@ class PaymentsController < ApplicationController
 
 		Stripe.api_key = ENV['STRIPE_SECRET_KEY']
 
-		# customer = Stripe::Customer.create(
-  # 		email: params[:email],
-  # 		card: params[:stripe_token]
-		# )
-
 		charge = Stripe::Charge.create(
 			amount: 49900,
 			currency: 'USD',
@@ -16,7 +11,7 @@ class PaymentsController < ApplicationController
 			description: "Payment by #{params[:email]} for ESM Summer ACT Course June 9-13"
 		)
 
-		Rails.logger.info "#{charge}"
+		EnrollmentMailer.payment_receipt(params[:email]).deliver if charge
 
 		render nothing: true
 	end

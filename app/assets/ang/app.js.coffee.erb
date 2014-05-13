@@ -5,22 +5,22 @@ app = angular.module('esmTestPrep', ['ngResource', 'ngCookies', 'ngAnimate', 'ro
 		$locationProvider.html5Mode(true)
 		$httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
 		$stateProvider
-			.state('comingSoon', {
+			# .state('comingSoon', {
+			# 	url: '/',
+			# 	templateUrl: '<%= asset_path("templates/comingsoon.html") %>'
+			# })
+			.state('home', {
 				url: '/',
-				templateUrl: '<%= asset_path("templates/comingsoon.html") %>'
-			})
-			.state('demo', {
-				url: '/demo',
 				templateUrl: '<%= asset_path("templates/home.html") %>',
 				controller: 'StaticHomeCtrl' 	
 			})
 			.state('classes', {
-				url: '/demo/classes',
+				url: '/classes',
 				templateUrl: '<%= asset_path("templates/classes.html") %>',
 				controller: 'ClassSelectionCtrl'	
 			})
 			.state('payment', {
-				url: '/demo/payment',
+				url: '/classes/payment',
 				templateUrl: '<%= asset_path("templates/payment.html") %>',
 				controller: 'PaymentCtrl'	
 			})

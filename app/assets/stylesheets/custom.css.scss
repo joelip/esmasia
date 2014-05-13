@@ -9,6 +9,9 @@ $browser-context: 14; // Default
   @return #{$pixels/$context}em
 }
 
+a {
+  cursor: pointer;
+}
 .logo-round {
   $logo-size: 80px;
   position: absolute;
