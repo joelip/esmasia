@@ -347,3 +347,15 @@
 		}
 	}
 }
+
+.help-footer {
+	position: fixed;
+	bottom: 16px;
+	left: 16px;
+	z-index: 100;
+	.help-link {
+		color: $twitter-light;
+		font-size: 16px;
+		letter-spacing: 0.5px;
+	}
+}

@@ -10,9 +10,11 @@ class PaymentsController < ApplicationController
 			card: params[:stripe_token],
 			description: "Payment by #{params[:email]} for ESM Summer ACT Course June 9-13"
 		)
-
-		EnrollmentMailer.payment_receipt(params[:email]).deliver if charge
-
+		if charge
+			EnrollmentMailer.payment_receipt(params[:email]).deliver 
+			AdminMailer.successful_payment(params[:email]).deliver
+		end
+		
 		render nothing: true
 	end
 
