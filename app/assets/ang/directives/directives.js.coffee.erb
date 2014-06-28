@@ -19,6 +19,22 @@ app.directive 'reloadLink', ['$window', ($window) ->
     )
 ]
 
+app.directive 'elemAnimate', ['$window', ($window) ->
+  restrict: 'A',
+  link: (scope, element, attrs) ->
+    trigger = $(window).height() - 50
+
+    $(window).on('scroll', ->
+      topOfWindow = $(window).scrollTop()
+
+      pos = element.offset().top
+
+      if pos < topOfWindow+trigger
+        element.addClass(attrs.elemAnimate)
+    )
+
+]
+
 app.directive 'tbModal', ['$rootScope', ($rootScope) ->
   restrict: 'EA',
   templateUrl: '<%= asset_path("templates/directives/registration.modal.html") %>'
