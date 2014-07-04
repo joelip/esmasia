@@ -19,6 +19,11 @@ app = angular.module('esmTestPrep', ['ngResource', 'ngCookies', 'ngAnimate', 'ro
 				templateUrl: '<%= asset_path("templates/classes.html") %>',
 				controller: 'ClassSelectionCtrl'	
 			})
+			.state('mentors', {
+				url: '/mentors',
+				templateUrl: '<%= asset_path("templates/mentors.html") %>',
+				controller: 'MentorCtrl'	
+			})
 			.state('payment', {
 				url: '/classes/payment',
 				templateUrl: '<%= asset_path("templates/payment.html") %>',

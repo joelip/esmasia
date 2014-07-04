@@ -14,6 +14,16 @@ app.controller 'ClassSelectionCtrl', ['$scope', 'Enrollment', ($scope, Enrollmen
 
 ]
 
+app.controller 'MentorCtrl', ['$scope', ($scope) ->
+
+  $scope.mentors = [
+    {
+      
+    }
+  ]
+
+]
+
 app.controller 'PaymentCtrl', ['$scope', 'StripeCard', '$rootScope', ($scope,
   StripeCard, $rootScope) ->
 
