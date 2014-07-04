@@ -5,7 +5,7 @@ class PaymentsController < ApplicationController
 		Stripe.api_key = ENV['STRIPE_SECRET_KEY']
 
 		charge = Stripe::Charge.create(
-			amount: 49900,
+			amount: 99900,
 			currency: 'USD',
 			card: params[:stripe_token],
 			description: "Payment by #{params[:email]} for ESM Summer ACT Course June 9-13"
