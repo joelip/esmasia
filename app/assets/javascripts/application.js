@@ -12,13 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.velocity.min
+//= require jquery.velocity.min.js
 //= require underscore
 //= require angular
 //= require angular-resource
 //= require angular-cookies
 //= reuiqre angular-sanitize
 //= require angular-animate
+//= require angular-scroll.min.js
 //= require ui-bootstrap
 //= require angular-ui-router
 //= require ../ang/app.js.coffee.erb

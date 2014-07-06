@@ -1,16 +1,5 @@
 app = angular.module('esmTestDirectives', [])
 
-app.directive 'scrollOnClick', ['$location', '$anchorScroll', ($location, $anchorScroll) ->
-  restrict: 'A',
-  scope:
-    anchor: '='
-  link: (scope, element, attrs) ->
-    element.on('click', ->
-      $location.hash(attrs.scrollOnClick)
-      $anchorScroll()
-    )
-]
-
 app.directive 'reloadLink', ['$window', ($window) ->
   restrict: 'A',
   link: (scope, element, attrs) ->

@@ -49,11 +49,11 @@
         }
         .initial {
           margin: 0;
-          color: $dark_grey;
+          color: $base_blue;
           font-size: 72px;
           line-height: $d;
           width: $d;
-          @include transform(translate(-3px,-3px));
+          @include transform(translate(-5px,-5px));
           vertical-align: middle;
           text-align: center;
           font-weight: 400;
@@ -67,7 +67,7 @@
           margin-right: auto;
           display: block; 
           border-radius: 50%;
-          border: 2.5px solid rgb(168,206,255);
+          border: 4px solid $base_blue;
         }
       }
     }

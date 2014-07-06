@@ -15,6 +15,7 @@ Esmtestprep::Application.routes.draw do
   get '/mentors', to: 'static_pages#mentors'
   get '/mentorship-model', to: redirect('/')
   get '/esm-offerings', to: redirect('/')
+  get '/location-container', to: redirect('/')
 
   # get '/demo', to: 'static_pages#home'
   # get '/demo/classes', to: 'static_pages#classes'
