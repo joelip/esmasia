@@ -1,0 +1,30 @@
+<div id="mentor-info">
+  <nav class="static-nav">
+    <img class="logo-round" src="/assets/esm_round_logo.png">
+    <h2 class="page-title">Private Tutoring</h2>
+    <div class="links-container">
+      <a ui-sref="home" class="nav-link">home</a>
+      <a ui-sref="classes" class="nav-link">classes</a>
+      <a ui-sref="mentors" class="nav-link">private tutoring</a>
+    </div>
+  </nav>
+  <div class="mentor-container row">
+    <aside class="mentor-sidebar col-lg-3">
+      <div class="mentor-box" ng-repeat="m in mentors">
+        <div third-class="{{$index}}" class="box-content" ng-click="setMentorSpotlight(m)">
+          <img ng-src="{{m.photoUrl}}" ng-hide="m.photoUrl == undefined" class="mentor-photo">
+          <div class="mentor-photo" ng-hide="m.photoUrl != undefined">
+            <h1 class="initial">{{m.name | initial}}</h1>
+          </div>
+          <h6 class="mentor-name">{{m.name}}</h6>
+        </div>
+      </div>
+    </aside>
+    <section class="mentor-bio col-lg-9">
+      <h2>{{mentorSpotlight.name}}</h2>
+      <h4>{{mentorSpotlight.location}}</h4>
+      <div class="bio" ng-bind-html="mentorSpotlight.bio"></div>
+      <a href="mailto:info@esmcollege.com" class="button-blue"><i class="ion-chevron-right"></i> request information</a>
+    </section>
+  </div>
+</div>

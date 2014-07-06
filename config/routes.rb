@@ -12,6 +12,7 @@ Esmtestprep::Application.routes.draw do
   get '/home', to: 'static_pages#home'
   get '/classes', to: 'static_pages#classes'
   get '/classes/payment', to: 'enrollment#payment_page', as: 'payment'
+  get '/mentors', to: 'static_pages#mentors'
   get '/mentorship-model', to: redirect('/')
   get '/esm-offerings', to: redirect('/')
 

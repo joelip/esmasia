@@ -137,3 +137,13 @@ app.directive 'validCvc', ->
           'border': '2px solid #B8D9FF'  
         })
     )
+
+app.directive 'thirdClass', ->
+  restrict: 'A',
+  link: (scope, element, attrs) ->
+    i = Number(attrs.thirdClass)
+    if [1,2,5].indexOf(i) is -1
+      element.addClass('even')
+    else
+      element.addClass('odd')
+

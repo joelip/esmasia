@@ -11,5 +11,9 @@ class StaticPagesController < ApplicationController
 	def classes
 
 	end
+
+  def mentors
+
+  end
 	
 end

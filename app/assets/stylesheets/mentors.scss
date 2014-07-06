@@ -1,6 +1,121 @@
 @import "color";
 @import "buttons";
 
+// @media screen and (min-width: 1200px) {
+//   .mentor-container {
+//     width: 1200px;
+//   }
+// }
+
 #mentor-info {
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background.jpg');
+  .mentor-container {
+    width: 1200px;
+    position: absolute;
+    top: 135px;
+    left: 50%;
+    @include transform(translateX(-50%));
+    .mentor-box {
+      width: 50%;
+      height: calc(513px / 3);
+      display: inline-block;
+      .odd {
+        background-color: rgba(255,255,255,0.8);
+        height: calc(513px / 3);
+      }
+      .even {
+        background-color: rgba(245,247,250,0.8);
+        height: calc(513px / 3);
+      }
+      .box-content {
+        $d: 100px;
+        @include transition(all 0.5s linear);
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+        }
+        .mentor-name {
+          position: relative;
+          top: 15%;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 1;
+          text-align: center;
+        }
+        .initial {
+          margin: 0;
+          color: $dark_grey;
+          font-size: 72px;
+          line-height: $d;
+          width: $d;
+          @include transform(translate(-3px,-3px));
+          vertical-align: middle;
+          text-align: center;
+          font-weight: 400;
+        }
+        .mentor-photo {
+          position: relative;
+          top: 10%;
+          height: $d;
+          width: $d;
+          margin-left: auto;
+          margin-right: auto;
+          display: block; 
+          border-radius: 50%;
+          border: 2.5px solid rgb(168,206,255);
+        }
+      }
+    }
+    .mentor-sidebar {
+      width: 30.4%;
+      height: 513px;
+      background-color: transparent;
+      float: left;      
+    }
+    .mentor-bio {
+      width: 69.6%;
+      height: 513px;
+      position: relative;
+      background-color: #F5F7FA;
+      padding: 50px;
+      h2 {
+        margin-top: 0;
+        font-size: 48px;
+        letter-spacing: 2.5px;
+        font-weight: 600;
+      }
+      h4 {
+        font-size: 24px;
+        letter-spacing: 0.25px;
+        color: rgb(170,178,189);
+      }
+      p {
+        color: $dark_grey;
+      } 
+      .button-blue {
+        position: relative;
+        top: 24px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        max-width: 330px;
+        .ion-chevron-right {
+          font-size: 20px;
+          @include transform(translate(0,1px));
+          margin-right: 16px;
+          @include transition(transform 0.15s linear);
+        }
+        &:hover {
+          .ion-chevron-right {
+            @include transform(translate(6px,1px));
+          }
+        }
+      }
+    }
+  }
 }

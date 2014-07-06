@@ -17,6 +17,7 @@
 //= require angular
 //= require angular-resource
 //= require angular-cookies
+//= reuiqre angular-sanitize
 //= require angular-animate
 //= require ui-bootstrap
 //= require angular-ui-router
