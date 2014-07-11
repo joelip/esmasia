@@ -18,33 +18,56 @@ app.controller 'MentorCtrl', ['$scope', '$sce', ($scope, $sce) ->
 
   $scope.mentorSpotlight = 
     {
-      name: 'John Sheffield',
-      photoUrl: 'http://esmtest.s3.amazonaws.com/john_sheffield.jpg',
-      location: 'San Francisco, CA',
-      bio: $sce.trustAsHtml('
-            <p>
-              Hailing from the gray skies of Portland, John graduated from Yale University in 2010 with a BA in political 
-              science. A college football player, John was nationally recognized for his achievements both on the field 
-              and in the classroom.
-            </p>
-            <p>
-              After brief stints interning in the US Senate and playing professional football in Europe, John brought his
-              passion for educating students to ESM in 2011. He has worked with students in English, Spanish, history, 
-              algebra, geometry, pre­calculus and the SAT and ACT. In addition to academic assistance, John counsels 
-              students to find the right fit college and helps them through every step of the admissions process.
-            </p>
-            <p>
-              In 2012 John began managing ESM operations in the Bay Area. Now, as the Managing Director of Tutoring 
-              and Test Prep, John oversees all domestic academic mentors and ensures quality service to clients. 
-              As part of his responsibilities, he connects with parents and students about their experiences with 
-              ESM and seeks out further tutoring and test prep opportunities.
-            </p>')
+      name: 'Lawrence Anicete',
+      photoUrl: "https://esmtest.s3.amazonaws.com/lawrence_anicete.jpeg",
+      location: 'Sacramento, CA',
+      bio: $sce.trustAsHtml("
+        <p>
+          Lawrence has been mentoring students of all ages and backgrounds for more than 10 years. He currently tutors students in 
+          various subjects, including the SAT, ACT, Algebra I &II, Geometry, Pre-Calculus, Calculus I, II, & III, AP Statistics, 
+          differential equations, chemistry, physics, and US History. Lawrence helps students use their own strengths and individual 
+          learning styles to be maximize their success both in and out of the classroom.
+        </p>
+        <p>
+          Upon graduating with high marks from Sacred Heart Cathedral Preparatory in San Francisco, Lawrence moved across 
+          the country to attend Worcester Polytechnic Institute on an academic scholarship. He eventually decided that 
+          New England winters were far too cold and finished his undergraduate studies at Rose-Hulman Institute of Technology 
+          in Terre Haute, IN. He is currently making use of his BS in Mechanical Engineering working for Valspar as a plant 
+          engineer. Lawrence is also concurrently working on his MBA at UC Davis.
+        </p>
+        <p>
+          When he’s not working, you can find Lawrence playing basketball, tennis, climbing, or biking. He also likes to spend 
+          time outdoors with his two rescue dogs, Marv and Echo.
+        </p>")
     }
 
   $scope.setMentorSpotlight = (mentor) ->
     $scope.mentorSpotlight = mentor
 
   $scope.mentors = [
+    {
+      name: 'Lawrence Anicete',
+      photoUrl: "https://esmtest.s3.amazonaws.com/lawrence_anicete.jpeg",
+      location: 'Sacramento, CA',
+      bio: $sce.trustAsHtml("
+        <p>
+          Lawrence has been mentoring students of all ages and backgrounds for more than 10 years. He currently tutors students in 
+          various subjects, including the SAT, ACT, Algebra I &II, Geometry, Pre-Calculus, Calculus I, II, & III, AP Statistics, 
+          differential equations, chemistry, physics, and US History. Lawrence helps students use their own strengths and individual 
+          learning styles to be maximize their success both in and out of the classroom.
+        </p>
+        <p>
+          Upon graduating with high marks from Sacred Heart Cathedral Preparatory in San Francisco, Lawrence moved across 
+          the country to attend Worcester Polytechnic Institute on an academic scholarship. He eventually decided that 
+          New England winters were far too cold and finished his undergraduate studies at Rose-Hulman Institute of Technology 
+          in Terre Haute, IN. He is currently making use of his BS in Mechanical Engineering working for Valspar as a plant 
+          engineer. Lawrence is also concurrently working on his MBA at UC Davis.
+        </p>
+        <p>
+          When he’s not working, you can find Lawrence playing basketball, tennis, climbing, or biking. He also likes to spend 
+          time outdoors with his two rescue dogs, Marv and Echo.
+        </p>")
+    },
     {
       name: 'John Sheffield',
       photoUrl: 'http://esmtest.s3.amazonaws.com/john_sheffield.jpg',
@@ -89,25 +112,6 @@ app.controller 'MentorCtrl', ['$scope', '$sce', ($scope, $sce) ->
           As a Philadelphia native and Arsenal fan, Adam balances his favorite teams' perpetual disappointments by focusing on
           his students' successes. Adam also trains incoming ESM academic mentors and works to develop SAT math curriculum for Versal, 
           a technology based education start­up.
-        </p>")
-    },
-    {
-      name: 'Dan Feinstat',
-      photoUrl: undefined,
-      location: 'Sacramento, CA',
-      bio: $sce.trustAsHtml("
-        <p>Daniel is a Sacramento native who graduated from Rio Americano High School in 2006. He then moved south along the coast to
-          the University of Southern California, where he earned a BA in clinical psychology. During his time at USC he was the social and 
-          philanthropic chair of the Delta Kappa Alpha film fraternity and also a volunteer in public elementary schools, where he worked 
-          with ESL students. After taking anatomy and physiology at the USC med school, Daniel decided to pursue a career physical medicine and 
-          rehabilitation. He spent a summer working in a research lab studying the autoimmune disease myasthenia gravis. He interned in the 
-          emergency room of Sutter General Hospital in Sacramento and spent a year working as a medical aide in post surgical recovery. Daniel 
-          is currently taking post-baccalaureate science courses to prepare for medical school.'
-        </p>
-        <p>
-          Daniel has always enjoyed working with students and helping them to achieve their goals. He finds it extremely satisfying to see people
-          work hard and succeed, which is part of what draws him to rehabilitative medicine. In his free time, Daniel enjoys skiing in Tahoe,
-          playing tennis, and watching the HBO show Game of Thrones.
         </p>")
     },
     {
