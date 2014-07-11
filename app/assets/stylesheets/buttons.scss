@@ -3,7 +3,7 @@
 @import "fonts";
 @import "color";
 
-.button-transparent, .button-blue {
+.button-transparent, .button-blue, .button-green {
 	padding: 16px 32px;
 	@include btn_radius;
 	font-size: 18px;
@@ -15,6 +15,25 @@
 	&:hover {
 		text-decoration: none;
 		color: white;
+	}
+}
+.button-green {
+	background-color: transparent;
+	border: 2px solid $bf_dark_grass;
+	color: $bf_dark_grass;
+	.ion-chevron-right {
+		font-size: 20px;
+		@include transform(translate(0,1px));
+		margin-right: 16px;
+		@include transition(transform 0.15s linear);
+	}
+	border: 2px solid $bf_dark_grass;
+	color: $bf_dark_grass;
+	&:hover {
+		background-color: $bf_dark_grass;
+		.ion-chevron-right {
+			@include transform(translate(6px,1px));
+		}
 	}
 }
 .button-transparent {

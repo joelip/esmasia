@@ -1,124 +1,131 @@
 <section tb-modal>
-	
+  
 </section>
 <section id="class-selection">
-	<nav class="static-nav">
-		<img class="logo-round" src="/assets/esm_round_logo.png">
-		<h2 class="page-title">Summer Classes</h2>
-		<div class="links-container">
-			<a ui-sref="home" class="nav-link">home</a>
-			<a ui-sref="classes" class="nav-link">classes</a>
-			<a ui-sref="mentors" class="nav-link">private tutoring</a>
-		</div>
-	</nav>
-	<div class="class-choice-container">
-		<div class="col-lg-4">
-			<div class="class-selection">
-				<header class="location-head">
-					<div class="location-circle">
-						<i class="ion-location"></i>
-					</div>
-					<span class="address">
-						50 fullerton ct
-						<br>
-						sacramento, ca 95825
-					</span>
-				</header>
-				<div class="class-choice-body">
-					<h3 class="class-dates">
-						Most Saturdays
-					</h3>
-					<div class="line-box-classes"></div>
-					<h6 class="class-title">
-						Proctored SAT/ACT Exam
-					</h6>
-					<p class="class-description">
-						Most Saturdays from 9am to 1pm, ESM will
-						be hosting a free proctored SAT/ACT or SAT
-						Subject test for all enrolled students. Tests
-						come with a free score analysis and printout
-						of your student’s results.
-					</p>
-				</div>
-				<footer class="class-choice-footer">
-					<h6 class="class-title">
-						Enrollment fee: 
-						<span class="price">$0</span>
-					</h6>
-					<a href="mailto:info@esmcollege.com" class="button-request">request information</a>
-				</footer>
-			</div>
-		</div>
-		<div class="col-lg-4">
-			<div class="class-selection">
-				<header class="location-head">
-					<div class="location-circle">
-						<i class="ion-location"></i>
-					</div>
-					<span class="address">
-						50 fullerton ct
-						<br>
-						sacramento, ca 95825
-					</span>
-				</header>
-				<div class="class-choice-body">
-					<h3 class="class-dates">
-						Aug. 6 to Sept. 13
-					</h3>
-					<div class="line-box-classes"></div>
-					<h6 class="class-title">
-						August ACT Seminar
-					</h6>
-					<p class="class-description">
-						A highly-personalized seminar taught by two instructors in a small-classroom environment that will prepare pupils for all aspects of the September 13 ACT. 
-						<span class="red">Classes are Wednesday evenings, starting 8/6/2014, from 6:30pm-9:00pm.</span>
-					</p>
-				</div>
-				<footer class="class-choice-footer">
-					<h6 class="class-title">
-						Enrollment fee: 
-						<span class="price">$899</span>
-					</h6>
-					<a ng-click="showRegistration = !showRegistration" class="button-enroll">enroll in this class</a>
-				</footer>
-			</div>
-		</div>
-		<div class="col-lg-4">
-			<div class="class-selection">
-				<header class="location-head">
-					<div class="location-circle">
-						<i class="ion-location"></i>
-					</div>
-					<span class="address">
-						50 fullerton ct
-						<br>
-						sacramento, ca 95825
-					</span>
-				</header>
-				<div class="class-choice-body">
-					<h3 class="class-dates">
-						Select Saturdays
-					</h3>
-					<div class="line-box-classes"></div>
-					<h6 class="class-title">
-						ESM Test Booster Seminar
-					</h6>
-					<p class="class-description">
-						On select saturdays, ESM will host free, one
-						hour lectures on specific topics related to 
-						the SAT and ACT. Topics covered: SAT Critical
-						Reading, Math and Writing; ACT Writing,
-						English, Reading and Science.
-					</p>
-				</div>
-				<footer class="class-choice-footer">
-					<h6 class="class-title">
-						Enrollment fee: 
-						<span class="price">$0</span>
-					</h6>
-					<a href="mailto:info@esmcollege.com" class="button-request">request information</a>
-				</footer>
-			</div>
-		</div>
-	</div>
+  <nav class="static-nav">
+    <img class="logo-round" src="/assets/esm_round_logo.png">
+    <h2 class="page-title">Course Offerings</h2>
+    <div class="links-container">
+      <a ui-sref="home" class="nav-link">home</a>
+      <a ui-sref="classes" class="nav-link">classes</a>
+      <a ui-sref="mentors" class="nav-link">private tutoring</a>
+    </div>
+  </nav>
+  <div class="class-choice-container">
+    <aside class="selection-sidebar">
+      <a href="" class="sidebar-link" ng-class="{'selected': currentTab == 'SAT'}" ng-click="selectTab('SAT')">SAT Classes and Seminars</a>
+      <a href="" class="sidebar-link" ng-class="{'selected': currentTab == 'ACT'}" ng-click="selectTab('ACT')">ACT Classes and Seminars</a>
+      <a href="" class="sidebar-link" ng-class="{'selected': currentTab == 'Referral'}" ng-click="selectTab('Referral')">Referral Program</a>
+    </aside>
+    <section class="selection-content">
+      <div class="seminar-container" ng-show="currentTab == 'SAT'">
+        <div class="main-icon sat">
+          <i class="ion-lightbulb"></i>
+        </div>
+        <h3 class="selection-title">SAT Seminars</h3>
+        <div class="row">
+          <aside class="seminar-details col-md-8">
+            <p class="seminar-description">
+              A weekly course that will prepare your 
+              student for the first SAT of the Fall. 
+              Classes dive into all aspects of the SAT 
+              and the class ends with a full practice 
+              exam. To learn more about the mentors 
+              who will be teaching the courses
+              visit our mentors page. 
+            </p>
+            <a class="button-green" ng-click="showModal('SAT')">
+              <i class="ion-chevron-right"></i>
+              enroll in sat seminar
+            </a>
+          </aside>
+          <aside class="col-md-4">
+            <div class="seminar-box">
+              <h4 class="seminar-box-title">Available Dates</h4>
+              <h6 class="seminar-date">
+                Sept. 2 to Oct. 11
+              </h6>
+              <p class="seminar-time">
+                Every tuesday
+                <br>
+                6:30-9:00pm
+              </p>
+              <h6 class="seminar-date">
+                Oct. 28 to Dec. 2
+              </h6>
+              <p class="seminar-time">
+                Every tuesday
+                <br>
+                6:30-9:00pm
+              </p>
+            </div>  
+          </aside>
+        </div>
+      </div>
+      <div class="seminar-container" ng-show="currentTab == 'ACT'">
+        <div class="main-icon act">
+          <i class="ion-lightbulb"></i>
+        </div>
+        <h3 class="selection-title">ACT Seminars</h3>
+        <div class="row">
+          <aside class="seminar-details col-md-8">
+            <p class="seminar-description">
+              A weekly course that will prepare your 
+              student for the first ACT of the Fall. 
+              Classes dive into all aspects of the ACT 
+              and the class ends with a full practice 
+              exam. To learn more about the mentors 
+              who will be teaching the courses
+              visit our mentors page. 
+            </p>
+            <a class="button-green" ng-click="showModal('ACT')">
+              <i class="ion-chevron-right"></i>
+              enroll in act seminar
+            </a>
+          </aside>
+          <aside class="col-md-4">
+            <div class="seminar-box">
+              <h4 class="seminar-box-title">Available Dates</h4>
+              <h6 class="seminar-date">
+                Aug. 6 to Sept. 10
+              </h6>
+              <p class="seminar-time">
+                Every wednesday
+                <br>
+                6:30-9:00pm
+              </p>
+              <h6 class="seminar-date">
+                Nov. 28 to Dec. 10
+              </h6>
+              <p class="seminar-time">
+                Every wednesday
+                <br>
+                6:30-9:00pm
+              </p>
+            </div>  
+          </aside>
+        </div>
+      </div>
+      <div class="seminar-container" ng-show="currentTab == 'Referral'">
+        <div class="main-icon referral">
+          <i class="ion-arrow-return-left"></i>
+        </div>
+        <h3 class="selection-title">ACT Seminars</h3>
+        <p class="referral-text">
+          ESM has a referral program for both students and parents if they refer a student
+          who registers in any of our programs.
+        </p>
+        <h5 class="referral-title">Parents</h5>
+        <p class="referral-text">
+          $50 off the price of enrollment (or a $50 refund if your student has registered).
+          Recruited student is provided with the same discount.
+        </p>
+        <h5 class="referral-title">Students</h5>
+        <p class="referral-text">
+          $15 gift card to venues around the area such as Chipotle, Jamba, Starbucks, 
+          Pinkberry or a $15 Visa gift card for every other student referred.
+        </p>
+      </div>
+    </section>
+  </div>
 </section>

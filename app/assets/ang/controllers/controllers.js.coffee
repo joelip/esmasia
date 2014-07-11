@@ -9,6 +9,16 @@ app.controller 'StaticHomeCtrl', ['$scope', '$state', ($scope, $state) ->
 
 app.controller 'ClassSelectionCtrl', ['$scope', 'Enrollment', ($scope, Enrollment) ->
 
+  $scope.currentTab = 'SAT'
+
+  $scope.showModal = (type) ->
+    $scope.enrollment = {}
+    $scope.enrollment.type = type
+    $scope.showRegistration = true 
+
+  $scope.selectTab = (tabName) ->
+    $scope.currentTab = tabName
+
   $scope.submitEnrollment = ->
     Enrollment.createEnrollment($scope.enrollment)
 

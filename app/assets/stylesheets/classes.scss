@@ -2,95 +2,123 @@
 @import "mixins";
 @import "color";
 @import "modals";
+@import "buttons";
 
 #class-selection {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url('background.jpg');
-	.class-choice-container	{
-		margin-top: 135px;
-		width: 100%;
-		.class-selection {
-			padding: 36px;
-			position: relative;
-			@include display_block_center;
-			height: 500px;
-			width: 375px;
-			background-color: rgba(230,233,237,0.85);
-			@include transition(background-color 0.1s linear);
-			&:hover {
-				background-color: rgb(230,233,237);	
-			}
-			.class-title {
-				font-size: 18px;
-				color: $dark_grey;
-			}
-			.location-head {
-				height: 75px;
-				.location-circle {
-					$circle-size: 75px;
-					@include circle($circle-size);
-					background-color: $bf_grapefruit;
-					margin-right: 12px;
-					.ion-location {
-						color: white;
-						font-size: 48px;
-						width: $circle-size;
-						line-height: $circle-size;
-						text-align: center;
-						vertical-align: middle;
-					}
-				}
-				.address {
-					font-family: 'NovecentoDemiBold', sans-serif;
-					font-size: 16px;
-					position: absolute;
-					top: 52px;
-					left: 132px;
-				}
-			}
-			.class-choice-body {
-				
-				.class-dates {
-					font-size: 36px;
-					color: $dark_grey;
-					font-weight: 600;
-				}
-				.line-box-classes {
-					border: 1.5px solid $dark_grey;
-					width: 100px;
-					margin-bottom: 24px;
-				}
-				.class-description {
-					color: $med_dark_grey;
-					font-size: 14px;
-					margin-bottom: 24px;
-				}
-				.red {
-					color: $bf_orange_red;
-				}
-			}
-			.class-choice-footer {
-				.class-title {
-					margin-right: 4px;
-				}
-				.price {
-					font-weight: 700;
-					color: $bf_light_grass;
-					text-shadow: $bf_dark_grass;
-				}
-				.button-enroll {
-					margin-top: 16px;
-					width: 100%;
-					text-align: center;
-				}
-				.button-request {
-					margin-top: 16px;
-				}
-			}
-		}
-	}
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background.jpg');
+  .class-choice-container {
+    width: 1200px;
+    position: absolute;
+    top: 135px;
+    left: 50%;
+    @include transform(translateX(-50%));
+    .selection-sidebar {
+      width: 30.4%;
+      height: 513px;
+      background-color: rgba(255,255,255,0.8);
+      float: left;  
+      padding: 48px 36px;
+      .sidebar-link {
+        vertical-align: middle;
+        padding: 12px;
+        line-height: 30px;
+        display: block;
+        font-size: 24px;
+        font-weight: 600;
+        color: $content_grey;
+        @include transition(all 0.25s linear);
+        &:hover {
+          color: $bf_blue_jeans_light;
+          text-decoration: none;
+        }
+        &.selected {
+          color: white;
+          background-color: $content_grey;
+          border-radius: 4px;
+        }
+      }
+    }
+    .selection-content {
+      width: 69.6%;
+      height: 513px;
+      position: relative;
+      background-color: #F5F7FA;
+      padding: 48px 60px 60px 60px;
+      float: right;
+      .main-icon {
+        $d: 100px;
+        height: $d;
+        width: $d;
+        @include display_block_center;
+        border-radius: 50%;
+        &.sat {
+          background-color: $bf_light_mint;
+        }
+        &.act {
+          background-color: $bf_aqua_dark;
+        }
+        &.referral {
+          background-color: $bf_light_grass;
+        }
+        .ion-lightbulb, .ion-arrow-return-left {
+          font-size: 60px;
+          color: white;
+          width: $d;
+          line-height: $d;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+      .selection-title {
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 24px;
+      }
+      .seminar-container {
+        .seminar-details {
+          .seminar-description {
+            font-size: 20px;
+          }
+          .button-green {
+            position: relative;
+            top: 24px;
+          }
+        }
+        .seminar-box {
+          border: 1.5px solid $content_grey;
+          padding: 16px;
+          position: relative;
+          left: 36px;
+          width: 175px;
+          border-radius: 4px;
+          .seminar-box-title {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-weight: 600;
+          }
+          .seminar-date {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+          }
+          .seminar-time {
+            font-size: 16px;
+          }
+        }
+        .referral-title {
+          font-weight: 600;
+          font-size: 18px;
+        }
+        .referral-text {
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
