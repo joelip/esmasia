@@ -21,7 +21,7 @@
 				<br>
 				<input type="text" class="registration-input" ng-model="enrollment.student_high_school"  required>
 				<div class="row grade-dob-input">
-					<div class="dob-group col-md-8">
+					<div class="dob-group col-md-8" style="width: 60%; margin-right: 6.6%;">
 						<label class="registration-label-left dob-label">
 							date of birth
 						</label>
@@ -48,7 +48,7 @@
 			</div>
 			<div class="col-lg-6 right-registration">
 				<h3 class="registration-title">
-					{{enrollment.type}} Seminar
+					{{enrollment.course_type}} {{enrollment.course_date}}
 				</h3>
 				<label class="registration-label-right">
 					parent full name
@@ -66,7 +66,7 @@
 				<br>
 				<input type="text" class="registration-input" ng-model="enrollment.home_address" required>
 				<div class="row grade-dob-input">
-					<div class="dob-group col-md-8">
+					<div class="dob-group col-md-8" style="width: 60%; margin-right: 6.6%;">
 						<label class="registration-label-right dob-label">
 							city
 						</label>

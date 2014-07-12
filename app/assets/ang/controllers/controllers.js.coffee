@@ -13,7 +13,7 @@ app.controller 'ClassSelectionCtrl', ['$scope', 'Enrollment', ($scope, Enrollmen
 
   $scope.showModal = (type) ->
     $scope.enrollment = {}
-    $scope.enrollment.type = type
+    $scope.enrollment.course_type = type
     $scope.showRegistration = true 
 
   $scope.selectTab = (tabName) ->

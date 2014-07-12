@@ -16,7 +16,9 @@ class EnrollmentController < ApplicationController
 			student_email: params[:student_email],
 			student_full_name: params[:student_full_name],
 			student_high_school: params[:student_high_school],
-			student_mobile_number: params[:student_mobile_number]
+			student_mobile_number: params[:student_mobile_number],
+			course_type: params[:course_type],
+			course_date: params[:course_date]
 		)
 		if enrollment
 			EnrollmentMailer.registration_success(enrollment).deliver
