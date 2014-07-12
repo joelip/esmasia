@@ -48,8 +48,17 @@
 			</div>
 			<div class="col-lg-6 right-registration">
 				<h3 class="registration-title">
-					{{enrollment.course_type}} {{enrollment.course_date}}
+					{{enrollment.course_type}} Seminar
 				</h3>
+				<label class="registration-label-right" style="margin-bottom: 0">session date:</label>
+				<select ng-model="enrollment.course_date" ng-show="enrollment.course_type == 'SAT'">
+					<option value="Sept. 2 to Oct. 11">Sept. 2 to Oct. 11</option>
+					<option value="Oct. 28 to Dec. 2">Oct. 28 to Dec. 2</option>
+				</select>
+				<select ng-model="enrollment.course_date" ng-show="enrollment.course_type == 'ACT'">
+					<option value="Aug. 6 to Sept. 10">Aug. 6 to Sept. 10</option>
+					<option value="Nov. 5 to Dec. 10">Nov. 5 to Dec. 10</option>
+				</select>
 				<label class="registration-label-right">
 					parent full name
 				</label>

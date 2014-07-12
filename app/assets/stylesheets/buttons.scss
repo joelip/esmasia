@@ -51,11 +51,10 @@
 	color: white;
 	background-color: $bf_aqua_light;
 	border: 0;
-	border-bottom: 4px solid $bf_aqua_dark;
 	@include btn_radius;
-	height: 70px;
+	height: 48px;
 	width: 100%;
-	line-height: 68px;
+	line-height: 48px;
 	font-size: 24px;
 	vertical-align: middle;
 	font-family: 'NovecentoDemiBold', sans-serif;

@@ -12,7 +12,7 @@
   height: 100%;
   background-image: url('background.jpg');
   .class-choice-container {
-    width: 1200px;
+    width: 1152px;
     position: absolute;
     top: 135px;
     left: 50%;
@@ -28,7 +28,7 @@
         padding: 12px;
         line-height: 30px;
         display: block;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
         color: $content_grey;
         @include transition(all 0.25s linear);
@@ -50,68 +50,73 @@
       background-color: #F5F7FA;
       padding: 48px 60px 60px 60px;
       float: right;
-      .cost {
-        color: $bf_light_grass;
-        font-weight: 700;
-      }
       .main-icon {
-        $d: 100px;
-        height: $d;
-        width: $d;
-        @include display_block_center;
-        border-radius: 50%;
-        &.sat {
-          background-color: $bf_light_mint;
-        }
-        &.act {
-          background-color: $bf_aqua_dark;
-        }
-        &.referral {
-          background-color: $bf_light_grass;
-        }
-        .ion-lightbulb, .ion-arrow-return-left {
-          font-size: 60px;
-          color: white;
-          width: $d;
-          line-height: $d;
-          text-align: center;
-          vertical-align: middle;
-        }
-      }
+         $d: 100px;
+         height: $d;
+         width: $d;
+         @include display_block_center;
+         border-radius: 50%;
+         &.sat {
+           background-color: $bf_light_mint;
+         }
+         &.act {
+           background-color: $bf_aqua_dark;
+         }
+         &.referral {
+           background-color: $bf_light_grass;
+         }
+         .ion-lightbulb, .ion-arrow-return-left {
+           font-size: 60px;
+           color: white;
+           width: $d;
+           line-height: $d;
+           text-align: center;
+           vertical-align: middle;
+         }
+       }
       .selection-title {
         font-size: 36px;
         font-weight: 600;
         text-align: center;
       }
       .seminar-container {
-        .seminar-details {
-          .seminar-description {
-            font-size: 20px;
-          }
-          .button-green {
-            position: relative;
-            top: 24px;
-          }
+        max-width: 800px;
+        position: relative;
+        left: 50%;
+        @include transform(translateX(-50%));
+        .seminar-title {
+          margin-top: 0;
+          margin-bottom: 16px;
+          font-size: 60px;
+          letter-spacing: 2.5px;
+          text-align: center;
         }
-        .seminar-box {
-          border: 1.5px solid $content_grey;
-          padding: 16px;
-          position: relative;
-          left: 36px;
-          width: 175px;
+        .column-title {
+          font-size: 24px;
+          font-weight: 600;
+        }
+        .course-description {
+          font-size: 20px;
+        }
+        .course-details-box {
+          border: 2px solid $med_light_grey;
           border-radius: 4px;
-          .seminar-box-title {
+          padding: 16px;
+          .detail-title {
             margin-top: 0;
             margin-bottom: 8px;
-            font-weight: 600;
-          }
-          .seminar-date {
-            margin: 0;
             font-size: 16px;
             font-weight: 600;
           }
-          .seminar-time {
-            font-size: 16px;
+          .price {
+            background-color: $bf_light_mint;
+            border-radius: 4px;
+            color: white;
+            padding: 4px;
+            font-size: 32px;
+            font-weight: 700;
+            width: 100px;
+            text-align: center;
           }
         }
         .referral-title {
@@ -120,6 +125,12 @@
         }
         .referral-text {
           font-size: 18px;
+        }
+        .button-green {
+          top: 30px;
+          position: relative;
+          left: 25%;
+          @include transform(translateX(-50%));
         }
       }
     }
