@@ -8,7 +8,8 @@
 	<div class="registration-container" success-msg>
 		<div class="col-lg-6 left-registration">
 			<h3 class="registration-title">
-				Payment
+				Payment 
+				<i class="ion-locked"></i>
 			</h3>
 			<p class="payment-info">
 				Payment is processed using a secure connction
@@ -18,14 +19,17 @@
 				ensure that your payments are protected from
 				fraud. 
 			</p>
-			<div class="secure-container">
-				<div class="security-circle">
-					<i class="ion-locked"></i>
-				</div>
-				<p class="security-label">
-					secure connection
-				</p>
-			</div>
+			<h3 class="registration-title">
+				Referred by someone? 
+			</h3>
+			<p class="payment-info">
+				Let us know if someone referred you to ESM. Tell us their name and you'll both get a referral bonus!
+			</p>
+			<label class="registration-label-right">
+				Referred by (name):
+			</label>
+			<br>
+			<input type="text" class="registration-input" placeholder="parent or student name" ng-model="referredBy">
 		</div>
 		<div class="col-lg-6 right-registration">
 			<h3 class="registration-title">

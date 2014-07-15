@@ -1,8 +1,8 @@
 class PaymentsController < ApplicationController
 
 	def create_payment
-
 		Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+		Rails.logger.info "Referred by: #{params[:referred_by]}"
 
 		charge = Stripe::Charge.create(
 			amount: 89900,
@@ -12,7 +12,7 @@ class PaymentsController < ApplicationController
 		)
 		if charge
 			EnrollmentMailer.payment_receipt(params[:email]).deliver 
-			AdminMailer.successful_payment(params[:email]).deliver
+			AdminMailer.successful_payment(params[:email], params[:referred_by]).deliver
 		end
 		
 		render nothing: true

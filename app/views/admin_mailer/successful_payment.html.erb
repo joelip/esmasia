@@ -1,4 +1,8 @@
 <p>Hi Billy,</p>
 <p>The parent with the email <%= @email %> just confirmed their enrollment. They should match the last enrollment email you received, but if they didn't, email me and I'll match their email to their enrollment.</p>
+<% if !!@referred_by %>
+<h5>Referral</h5>
+<p>They were also <b>referred by <%= @referred_by %></b>.</p>
+<% end %>
 <p>Let me know if you have any questions or if there were any errors with this email.</p>
 <p>Joe</p>

@@ -28,27 +28,19 @@
 	.secure-container {
 		margin-top: 50px;
 		.security-circle {
-			$circle: 75px;
+			$circle: 40px;
 			@include circle($circle);
 			@include display_block_center;
-			background-color: $bf_light_orange;
+			background-color: $bf_light_mint;
 			.ion-locked {
 				width: $circle;
 				line-height: $circle;
 				text-align: center;
 				vertical-align: middle;
 				color: white;
-				font-size: 36px;
+				font-size: 24px;
 			}
 		}
-	}
-	.security-label {
-		margin-top: 8px;
-		font-family: "NovecentoDemiBold", sans-serif;
-		font-size: 18px;
-		color: white;
-		text-align: center;
-		letter-spacing: 0.5px;
 	}
 	.registration-input {
 		@include placeholder {

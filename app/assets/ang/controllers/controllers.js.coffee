@@ -201,6 +201,7 @@ app.controller 'PaymentCtrl', ['$scope', 'StripeCard', '$rootScope', ($scope,
 
   $scope.submitCard = ->
     $rootScope.$broadcast('processing')
+    $scope.customer.referred_by = $scope.referredBy
     StripeCard.createPayment($scope.customer, $scope.date)
 
 ]

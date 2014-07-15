@@ -15,7 +15,7 @@ app.factory 'StripeCard', ['$http', '$rootScope', '$timeout', ($http, $rootScope
 					# assign token to object being POSTed
 					token = response['id']
 					# send token to server
-					$http.post('/create_payment', {stripe_token: token, email: customer.email})
+					$http.post('/create_payment', {stripe_token: token, email: customer.email, referred_by: customer.referred_by})
 						.success ->
 							$timeout($rootScope.$broadcast('successfulPayment'), 2000)
 						.error ->
