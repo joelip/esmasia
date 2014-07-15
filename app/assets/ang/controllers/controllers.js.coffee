@@ -13,7 +13,7 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
 
   $scope.goHome = ->
     $state.go('home')
-  
+
   $scope.showModal = (type) ->
     $scope.enrollment = {}
     $scope.enrollment.course_type = type
@@ -28,6 +28,9 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
 ]
 
 app.controller 'MentorCtrl', ['$scope', '$sce', ($scope, $sce) ->
+
+  $scope.goHome = ->
+    $state.go('home')
 
   $scope.mentorSpotlight = 
     {
