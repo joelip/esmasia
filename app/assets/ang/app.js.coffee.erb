@@ -12,21 +12,21 @@ app = angular.module('esmTestPrep', ['ngResource', 'ngCookies', 'ngAnimate', 'ro
 			.state('home', {
 				url: '/',
 				templateUrl: '<%= asset_path("templates/home.html") %>',
-				controller: 'StaticHomeCtrl' 	
+				controller: 'StaticHomeCtrl'
 			})
 			.state('classes', {
 				url: '/classes',
 				templateUrl: '<%= asset_path("templates/classes.html") %>',
-				controller: 'ClassSelectionCtrl'	
+				controller: 'ClassSelectionCtrl'
 			})
 			.state('mentors', {
 				url: '/mentors',
 				templateUrl: '<%= asset_path("templates/mentors.html") %>',
-				controller: 'MentorCtrl'	
+				controller: 'MentorCtrl'
 			})
 			.state('payment', {
 				url: '/classes/payment',
 				templateUrl: '<%= asset_path("templates/payment.html") %>',
-				controller: 'PaymentCtrl'	
+				controller: 'PaymentCtrl'
 			})
 	])

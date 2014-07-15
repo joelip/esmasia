@@ -7,10 +7,13 @@ app.controller 'StaticHomeCtrl', ['$scope', '$state', ($scope, $state) ->
 
 ]
 
-app.controller 'ClassSelectionCtrl', ['$scope', 'Enrollment', ($scope, Enrollment) ->
+app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope, $state, Enrollment) ->
 
   $scope.currentTab = 'SAT'
 
+  $scope.goHome = ->
+    $state.go('home')
+  
   $scope.showModal = (type) ->
     $scope.enrollment = {}
     $scope.enrollment.course_type = type

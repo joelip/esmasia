@@ -2,8 +2,8 @@
   
 </section>
 <section id="class-selection">
-  <nav class="static-nav">
-    <img class="logo-round" src="/assets/esm_round_logo.png">
+  <nav class="static-nav">  
+    <img class="logo-round" src="/assets/esm_round_logo.png" ng-click="goHome()" style="cursor: pointer">
     <h2 class="page-title">Course Offerings</h2>
     <div class="links-container">
       <a ui-sref="home" class="nav-link">home</a>
@@ -65,7 +65,7 @@
               </div>
             </div>
           </div>
-          <a class="button-green" ng-click="showModal('SAT')">
+          <a class="button-green" ng-click="showModal('SAT')" ng-hide="currentTab == 'Referral'">
             <i class="ion-chevron-right"></i>
             enroll in sat seminar
           </a>
@@ -118,7 +118,7 @@
               </div>
             </div>
           </div>
-          <a class="button-green" ng-click="showModal('ACT')">
+          <a class="button-green" ng-click="showModal('ACT')" ng-hide="currentTab == 'Referral'">
             <i class="ion-chevron-right"></i>
             enroll in act seminar
           </a>
