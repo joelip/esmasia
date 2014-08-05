@@ -5,7 +5,7 @@ class PaymentsController < ApplicationController
 		Rails.logger.info "Referred by: #{params[:referred_by]}"
 
 		charge = Stripe::Charge.create(
-			amount: 89900,
+			amount: cookies[:esm_session_price],
 			currency: 'USD',
 			card: params[:stripe_token],
 			description: "Payment by #{params[:email]} for ESM ACT Seminar 8/6/2014 to 9/3/2014"

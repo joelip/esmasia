@@ -102,21 +102,31 @@
           border: 2px solid $med_light_grey;
           border-radius: 4px;
           padding: 16px;
-          .detail-title {
-            margin-top: 0;
-            margin-bottom: 8px;
-            font-size: 16px;
+          h4, p {
+            margin: 0;
+          }
+          .session-change-label {
+            border-radius: 3px;
+            background-color: $bf_red;
+            color: white;
+            font-size: 12px;
+            padding: 3px 4px;
+          }
+          .session-title {
+            font-size: 18px;
             font-weight: 600;
           }
+          .session-detail {
+            font-size: 14px;
+            color: $blue_grey;
+          }
+          .session-detail-label {
+            font-weight: 600;
+            color: $content_grey;
+          }
           .price {
-            background-color: $bf_light_mint;
-            border-radius: 4px;
-            color: white;
-            padding: 4px;
-            font-size: 32px;
             font-weight: 700;
-            width: 100px;
-            text-align: center;
+            color: $bf_light_grass;
           }
         }
         .referral-title {
