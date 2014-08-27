@@ -22,7 +22,7 @@ class EnrollmentController < ApplicationController
 		)
 		if enrollment
 			c = cookies
-			params[:course_date] == "Aug. 20 to Sept. 10" ? c[:esm_session_price] = 59900 : c[:esm_session_price] = 89900
+			params[:course_date] == "Aug. 20 to Sept. 10" ? c[:esm_session_price] = 59900 : c[:esm_session_price] = 79900
 			Rails.logger.info "ESM Session Price is #{c[:esm_session_price]}"
 			EnrollmentMailer.registration_success(enrollment).deliver
 			AdminMailer.registered_student(enrollment).deliver
