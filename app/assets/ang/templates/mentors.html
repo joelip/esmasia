@@ -1,7 +1,7 @@
 <div id="mentor-info">
-  <nav class="static-nav">
+  <nav class="static-nav">  
     <img class="logo-round" src="/assets/esm_round_logo.png" ng-click="goHome()" style="cursor: pointer">
-    <h2 class="page-title">Private Tutoring</h2>
+    <span class="page-title">Course Offerings</span>
     <div class="links-container">
       <a ui-sref="home" link-selector="'home'" class="nav-link underline-fade-in">
         home
@@ -17,8 +17,8 @@
       </a>
     </div>
   </nav>
-  <div class="mentor-container row">
-    <aside class="mentor-sidebar col-lg-3">
+  <div class="mentor-container">
+    <aside class="mentor-sidebar">
       <div class="mentor-box" ng-repeat="m in mentors">
         <div third-class="{{$index}}" class="box-content" ng-click="setMentorSpotlight(m)">
           <img ng-src="{{m.photoUrl}}" ng-hide="m.photoUrl == undefined" class="mentor-photo">
@@ -29,7 +29,7 @@
         </div>
       </div>
     </aside>
-    <section class="mentor-bio col-lg-9">
+    <section class="mentor-bio">
       <h2>{{mentorSpotlight.name}}</h2>
       <h4>{{mentorSpotlight.location}}</h4>
       <div class="bio" ng-bind-html="mentorSpotlight.bio"></div>
