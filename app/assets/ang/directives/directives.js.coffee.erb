@@ -136,3 +136,33 @@ app.directive 'thirdClass', ->
     else
       element.addClass('odd')
 
+app.directive 'underlineFadeIn', ->
+  restrict: 'C',
+  scope:
+    linkSelector: '='
+  ,
+  link: (scope, element, attrs) ->
+
+    # link as a jQuery object
+    s = $('[ui-sref="' + scope.linkSelector + '"]')
+
+    # underline as a jQuery object
+    line = s.find('.nav-link-underline-hover')
+
+    console.log "Underline width is NOW: " + line.width()
+
+    offHover = ->
+      line.css
+        'opacity':           0,
+        'transform':         'translateY(0px)',
+        '-webkit-transform': 'translateY(0px)'
+
+    onHover = ->
+      line.css
+        'opacity':           1,
+        'transform':         'translateY(-16px)',
+        '-webkit-transform': 'translateY(-16px)'
+      console.log JSON.stringify line.css()
+
+    
+    element.hover(onHover, offHover)

@@ -11,18 +11,14 @@ Esmtestprep::Application.routes.draw do
   get '/sign_out', to: 'sessions#destroy', as: 'sign_out'
   get '/home', to: 'static_pages#home'
   get '/classes', to: 'static_pages#classes'
-  get '/classes/payment', to: 'enrollment#payment_page', as: 'payment'
   get '/mentors', to: 'static_pages#mentors'
   get '/mentorship-model', to: redirect('/')
   get '/esm-offerings', to: redirect('/')
-  get '/location-container', to: redirect('/')
-
   # get '/demo', to: 'static_pages#home'
   # get '/demo/classes', to: 'static_pages#classes'
   # get '/demo/payment', to: 'enrollment#payment_page', as: 'payment'
 
   # data routes
   post '/create_enrollment', to: 'enrollment#create_enrollment'
-  post '/create_payment', to: 'payments#create_payment'
 
 end

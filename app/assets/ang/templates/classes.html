@@ -6,9 +6,18 @@
     <img class="logo-round" src="/assets/esm_round_logo.png" ng-click="goHome()" style="cursor: pointer">
     <h2 class="page-title">Course Offerings</h2>
     <div class="links-container">
-      <a ui-sref="home" class="nav-link">home</a>
-      <a ui-sref="classes" class="nav-link">classes</a>
-      <a ui-sref="mentors" class="nav-link">private tutoring</a>
+      <a ui-sref="home" link-selector="'home'" class="nav-link underline-fade-in">
+        home
+        <div class="nav-link-underline-hover"></div>
+      </a>
+      <a ui-sref="classes" link-selector="'classes'" class="nav-link underline-fade-in">
+        classes
+        <div class="nav-link-underline-hover"></div>
+      </a>
+      <a ui-sref="mentors" link-selector="'mentors'" class="nav-link underline-fade-in">
+        mentors
+        <div class="nav-link-underline-hover"></div>
+      </a>
     </div>
   </nav>
   <div class="class-choice-container">
