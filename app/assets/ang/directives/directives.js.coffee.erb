@@ -145,11 +145,8 @@ app.directive 'underlineFadeIn', ->
 
     # link as a jQuery object
     s = $('[ui-sref="' + scope.linkSelector + '"]')
-
     # underline as a jQuery object
     line = s.find('.nav-link-underline-hover')
-
-    console.log "Underline width is NOW: " + line.width()
 
     offHover = ->
       line.css
@@ -162,7 +159,5 @@ app.directive 'underlineFadeIn', ->
         'opacity':           1,
         'transform':         'translateY(-16px)',
         '-webkit-transform': 'translateY(-16px)'
-      console.log JSON.stringify line.css()
-
     
     element.hover(onHover, offHover)

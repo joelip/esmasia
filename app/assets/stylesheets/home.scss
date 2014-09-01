@@ -6,253 +6,253 @@
 @import "animations";
 
 #welcome-page {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url('background.jpg');
-	.presentation-container {
-		margin-left: 10%;
-		margin-top: 12.5%;
-		width: 900px;
-		.welcome-title {
-			font-size: 60px;
-			font-weight: 600;
-			letter-spacing: 1.5px;
-			color: white;
-		}
-		.title-description {
-			color: white;
-			font-size: 24px;
-			letter-spacing: 0.75px;
-			text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
-		}
-		.button-container {
-			padding-top: 24px;
-			.button-transparent, .button-blue {
-				margin-right: 8px;
-				.ion-chevron-right {
-					font-size: 20px;
-					@include transform(translate(0,1px));
-					margin-right: 16px;
-					@include transition(transform 0.15s linear);
-				}
-				&:hover {
-					.ion-chevron-right {
-						@include transform(translate(6px,1px));
-					}
-				}
-			}
-		}
-	}
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background.jpg');
+  .presentation-container {
+    margin-left: 10%;
+    margin-top: 12.5%;
+    width: 900px;
+    .welcome-title {
+      font-size: 60px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: white;
+    }
+    .title-description {
+      color: white;
+      font-size: 24px;
+      letter-spacing: 0.75px;
+      text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    }
+    .button-container {
+      padding-top: 24px;
+      .button-transparent, .button-blue {
+        margin-right: 8px;
+        .ion-chevron-right {
+          font-size: 20px;
+          @include transform(translate(0,1px));
+          margin-right: 16px;
+          @include transition(transform 0.15s linear);
+        }
+        &:hover {
+          .ion-chevron-right {
+            @include transform(translate(6px,1px));
+          }
+        }
+      }
+    }
+  }
 }
 #mentorship-model {
-	position: absolute;
-	left: 0;
-	top: 100%;
-	height: 100%;
-	width: 100%;
-	background-color: white;
-	.mentor-model-box {
-		margin-top: 50px;
-		@include display_block_center;
-		padding: 40px;
-		width: 400px;
-		height: 575px;
-		background-color: $light_grey;
-		.mentor-model-title {
-			font-size: 24px;
-			letter-spacing: 1;
-			color: $dark_grey;
-			font-family: 'Source Sans Pro', sans-serif;
-			padding-bottom: 16px;
-		}
-		.mentor-model-list {
-			position: relative;
-			padding-start: 0;
-			-webkit-padding-start: 0;
-			-moz-padding-start: 0;
-			-ms-padding-start: 0;
-			.mentor-model-list-item {
-				width: 100%;
-				list-style: none;
-				min-height: 64px;
-				span {
-					padding: 0;
-				}
-				.mentor-model-point {
-					color: $icon_grey;
-					font-size: 18px;
-					font-weight: 300;
-				}
-				.col-lg-3 {
-					padding-top: 24px;
-				}
-				$circle-size: 50px;
-				.empty-circle {
-					position: relative;
-					@include display_block_center;
-					@include circle($circle-size);
-					height: $circle-size;
-					width: $circle-size;
-					.ion-arrow-graph-up-right,
-					.ion-map,
-					.ion-android-book,
-					.ion-lightbulb {
-						vertical-align: middle;
-						width: $circle-size;
-						line-height: $circle-size;
-						text-align: center;
-						font-size: 30px;
-					}
-					.ion-arrow-graph-up-right {
-						color: $bf_purple_light;
-						@include transform(translate(-5px,-2.5px));
-					}
-					.ion-map {
-						color: $bf_light_grass;
-						@include transform(translate(-3px,-2px));
-					}
-					.ion-android-book {
-						color: $bf_aqua_light;
-						@include transform(translateX(-3px));
-					}
-					.ion-lightbulb {
-						color: $bf_medium_yellow;
-						@include transform(translate(-3px,-2.5px));
-					}
-				}
-				.scores {
-					@include border-thick($bf_purple_light);
-				}
-				.map {
-					@include border-thick($bf_light_grass);
-				}
-				.book {
-					@include border-thick($bf_aqua_light);
-				}
-				.idea {
-					@include border-thick($bf_medium_yellow);
-				}
-			}
-		}
-	}
-	.focus-text-container {
-		padding-top: 60px;
-		padding-bottom: 60px;
-		.focus-text {
-			width: 400px;
-			color: $med_grey;
-			@include display_block_center;
-			text-align: center;
-			font-size: 24px;
-			font-weight: 300;
-			letter-spacing: 0;
-		}
-		.line-box {
-			height: 0;
-			border: 2px solid $med_grey;
-			width: 50px;
-			@include display_block_center;
-		}
-	}
-	.sat-book {
-		height: 655px;
-		width: 500px;
-		@include display_block_center;
-	}
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  .mentor-model-box {
+    margin-top: 50px;
+    @include display_block_center;
+    padding: 40px;
+    width: 400px;
+    height: 575px;
+    background-color: $light_grey;
+    .mentor-model-title {
+      font-size: 24px;
+      letter-spacing: 1;
+      color: $dark_grey;
+      font-family: 'Source Sans Pro', sans-serif;
+      padding-bottom: 16px;
+    }
+    .mentor-model-list {
+      position: relative;
+      padding-start: 0;
+      -webkit-padding-start: 0;
+      -moz-padding-start: 0;
+      -ms-padding-start: 0;
+      .mentor-model-list-item {
+        width: 100%;
+        list-style: none;
+        min-height: 64px;
+        span {
+          padding: 0;
+        }
+        .mentor-model-point {
+          color: $icon_grey;
+          font-size: 18px;
+          font-weight: 300;
+        }
+        .col-lg-3 {
+          padding-top: 24px;
+        }
+        $circle-size: 50px;
+        .empty-circle {
+          position: relative;
+          @include display_block_center;
+          @include circle($circle-size);
+          height: $circle-size;
+          width: $circle-size;
+          .ion-arrow-graph-up-right,
+          .ion-map,
+          .ion-android-book,
+          .ion-lightbulb {
+            vertical-align: middle;
+            width: $circle-size;
+            line-height: $circle-size;
+            text-align: center;
+            font-size: 30px;
+          }
+          .ion-arrow-graph-up-right {
+            color: $bf_purple_light;
+            @include transform(translate(-5px,-2.5px));
+          }
+          .ion-map {
+            color: $bf_light_grass;
+            @include transform(translate(-3px,-2px));
+          }
+          .ion-android-book {
+            color: $bf_aqua_light;
+            @include transform(translateX(-3px));
+          }
+          .ion-lightbulb {
+            color: $bf_medium_yellow;
+            @include transform(translate(-3px,-2.5px));
+          }
+        }
+        .scores {
+          @include border-thick($bf_purple_light);
+        }
+        .map {
+          @include border-thick($bf_light_grass);
+        }
+        .book {
+          @include border-thick($bf_aqua_light);
+        }
+        .idea {
+          @include border-thick($bf_medium_yellow);
+        }
+      }
+    }
+  }
+  .focus-text-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .focus-text {
+      width: 400px;
+      color: $med_grey;
+      @include display_block_center;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: 0;
+    }
+    .line-box {
+      height: 0;
+      border: 2px solid $med_grey;
+      width: 50px;
+      @include display_block_center;
+    }
+  }
+  .sat-book {
+    height: 655px;
+    width: 500px;
+    @include display_block_center;
+  }
 }
 
 #esm-offerings {
-	position: absolute;
-	top: 200%;
-	z-index: 1;
-	width: 100%;
-	height: 100%;
-	background-color: #FCFEFF;
-	.center-title {
-		position: relative;
-		margin-top: 64px;
-		font-size: 24px;
-		letter-spacing: 1;
-		color: $dark_grey;
-		font-family: 'Source Sans Pro', sans-serif;
-		padding-bottom: 16px;
-		text-align: center;
-		margin-bottom: 0;
-	}
-	.center-subtitle {
-		color: $med_grey;
-		font-size: 18px;
-		font-weight: 300;
-		text-align: center;
-		width: calc(100% / 3);
-		@include display_block_center;
-		margin-top: 0;
-	}
-	.offering-selection {
-		$circle-size: 400px;
-		.choice-circle {
-			@include circle($circle-size);
-			height: $circle-size;
-			width: $circle-size;
-			background-color: $med_light_grey;
-			@include display_block_center;
-			cursor: pointer;
-			@include transition (all 0.1s linear);
-			border: 0;
-			&:hover {
-				@include transform(translate3d(0,0,0));
-				@include transform(scale(1.05));
-			}
-			.cont {
-				position: relative;
-				height: 100%;
-				width: 100%;
-				.sat-act {
-					color: $bf_aqua_light;
-					font-size: 60px;
-					text-align: center;
-					padding-top: 96px;
-					padding-bottom: 60px;
-				}
-				.private-tutoring {
-					padding-top: 96px;
-					color: $bf_light_mint;
-					font-size: 60px;
-					text-align: center;
-					margin-bottom: 60px;
-				}
-				.wide-line {
-					width: 250px;
-					@include display_block_center;
-					margin-bottom: 16px;
-				}
-				.choice-detail {
-					font-size: 24px;
-					font-style: oblique;
-					text-align: center;
-				}
-			}
-			.blue {
-				@include border-thin($bf_aqua_light);
-			}
-			.green {
-				@include border-thin($bf_light_mint);
-			}
-		}
-	}
+  position: absolute;
+  top: 200%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #FCFEFF;
+  .center-title {
+    position: relative;
+    margin-top: 64px;
+    font-size: 24px;
+    letter-spacing: 1;
+    color: $dark_grey;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-bottom: 16px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .center-subtitle {
+    color: $med_grey;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    width: calc(100% / 3);
+    @include display_block_center;
+    margin-top: 0;
+  }
+  .offering-selection {
+    $circle-size: 400px;
+    .choice-circle {
+      @include circle($circle-size);
+      height: $circle-size;
+      width: $circle-size;
+      background-color: $med_light_grey;
+      @include display_block_center;
+      cursor: pointer;
+      @include transition (all 0.1s linear);
+      border: 0;
+      &:hover {
+        @include transform(translate3d(0,0,0));
+        @include transform(scale(1.05));
+      }
+      .cont {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        .sat-act {
+          color: $bf_aqua_light;
+          font-size: 60px;
+          text-align: center;
+          padding-top: 96px;
+          padding-bottom: 60px;
+        }
+        .private-tutoring {
+          padding-top: 96px;
+          color: $bf_light_mint;
+          font-size: 60px;
+          text-align: center;
+          margin-bottom: 60px;
+        }
+        .wide-line {
+          width: 250px;
+          @include display_block_center;
+          margin-bottom: 16px;
+        }
+        .choice-detail {
+          font-size: 24px;
+          font-style: oblique;
+          text-align: center;
+        }
+      }
+      .blue {
+        @include border-thin($bf_aqua_light);
+      }
+      .green {
+        @include border-thin($bf_light_mint);
+      }
+    }
+  }
 }
 
 .help-footer {
-	position: fixed;
-	bottom: 16px;
-	left: 16px;
-	z-index: 100;
-	.help-link {
-		color: $twitter-light;
-		font-size: 16px;
-		letter-spacing: 0.5px;
-	}
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 100;
+  .help-link {
+    color: $twitter-light;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
 }

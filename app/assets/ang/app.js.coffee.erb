@@ -1,32 +1,32 @@
 app = angular.module('esmTestPrep', ['ngResource', 'ngCookies', 'ngAnimate', 'routerModule',
 'esmTestPrepControllers', 'esmTestModels', 'esmTestFilters', 'esmAnimations', 'esmTestDirectives',
 'ui.bootstrap', 'duScroll'])
-	.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
-		$locationProvider.html5Mode(true)
-		$httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
-		$stateProvider
-			# .state('comingSoon', {
-			# 	url: '/',
-			# 	templateUrl: '<%= asset_path("templates/comingsoon.html") %>'
-			# })
-			.state('home', {
-				url: '/',
-				templateUrl: '<%= asset_path("templates/home.html") %>',
-				controller: 'StaticHomeCtrl'
-			})
-			.state('classes', {
-				url: '/classes',
-				templateUrl: '<%= asset_path("templates/classes.html") %>',
-				controller: 'ClassSelectionCtrl'
-			})
-			.state('mentors', {
-				url: '/mentors',
-				templateUrl: '<%= asset_path("templates/mentors.html") %>',
-				controller: 'MentorCtrl'
-			})
-			.state('payment', {
-				url: '/classes/payment',
-				templateUrl: '<%= asset_path("templates/payment.html") %>',
-				controller: 'PaymentCtrl'
-			})
-	])
+  .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
+    $locationProvider.html5Mode(true)
+    $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+    $stateProvider
+      # .state('comingSoon', {
+      #   url: '/',
+      #   templateUrl: '<%= asset_path("templates/comingsoon.html") %>'
+      # })
+      .state('home', {
+        url: '/',
+        templateUrl: '<%= asset_path("templates/home.html") %>',
+        controller: 'StaticHomeCtrl'
+      })
+      .state('classes', {
+        url: '/classes',
+        templateUrl: '<%= asset_path("templates/classes.html") %>',
+        controller: 'ClassSelectionCtrl'
+      })
+      .state('mentors', {
+        url: '/mentors',
+        templateUrl: '<%= asset_path("templates/mentors.html") %>',
+        controller: 'MentorCtrl'
+      })
+      .state('payment', {
+        url: '/classes/payment',
+        templateUrl: '<%= asset_path("templates/payment.html") %>',
+        controller: 'PaymentCtrl'
+      })
+  ])
