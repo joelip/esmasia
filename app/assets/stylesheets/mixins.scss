@@ -26,3 +26,7 @@
 @mixin border-thin($color) {
   border: 1.5px solid $color;
 }
+
+@mixin anti-alias {
+  -webkit-font-smoothing: subpixel-antialiased;
+}

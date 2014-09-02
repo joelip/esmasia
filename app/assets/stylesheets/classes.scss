@@ -4,42 +4,81 @@
 @import "modals";
 @import "buttons";
 
+// Sidebar colors
+$bg_sidebar: #53637A;
+$brdr_sidebar: #5E708A;
+// unselected
+$up_text: #97EFDC;
+$us_text: #1D98A0;
+// selected
+$ss_text: #F5F7FA;
+$sbg_color: #27CDD8;
+
+
 #class-selection {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('background.jpg');
   .class-choice-container {
     position: absolute;
     top: 64px;
     width: 100%;
     height: calc(100% - 64px);
-    .selection-sidebar {
+    .class-sidebar {
       position: relative;
       width: 30%;
       height: 100%;
-      background-color: rgba(255,255,255,0.8);
-      float: left;  
-      padding: 48px 36px;
-      .sidebar-link {
-        vertical-align: middle;
-        padding: 12px;
-        line-height: 30px;
-        display: block;
-        font-size: 20px;
-        font-weight: 600;
-        color: $content_grey;
-        @include transition(all 0.25s linear);
+      background-color: $bg_sidebar;
+      float: left;
+      .class-item {
+        position: relative;
+        height: calc(100% / 7);
+        background-color: $bg_sidebar;
+        border-bottom: 1px solid $brdr_sidebar;
+        cursor: pointer;
+        .class-item-container {
+          position: relative;
+          top: 50%;
+          @include transform(translateY(-50%));
+          .class-item-school, .item-chevron {
+            margin: 0;
+            font-size: 20px;
+            @include anti-alias;
+            color: $up_text;
+          }
+          .class-item-school {
+            padding-left: 36px;
+          }
+          .class-item-location {
+            margin: 4px auto;
+            padding-left: 36px;
+            font-size: 16px;
+            color: $us_text;
+            @include anti-alias;
+          }
+          .item-chevron {
+            position: absolute;
+            right: 44px;
+            top: 50%;
+            @include transform(translate3d(0,-50%,0));
+            @include transition(transform 0.1s linear);
+          }
+        }
         &:hover {
-          color: $bf_blue_jeans_light;
-          text-decoration: none;
+          .item-chevron {
+            @include transform(translate3d(8px,-50%,0));
+          }
         }
         &.selected {
-          color: white;
-          background-color: $content_grey;
-          border-radius: 4px;
+          background-color: $sbg_color;
+          .class-item-school, .item-chevron {
+            color: white;
+          }
+          .class-item-location {
+            color: $ss_text;
+          }
         }
       }
     }
@@ -50,99 +89,7 @@
       background-color: #F5F7FA;
       padding: 48px 60px 60px 60px;
       float: right;
-      .main-icon {
-         $d: 100px;
-         height: $d;
-         width: $d;
-         @include display_block_center;
-         border-radius: 50%;
-         &.sat {
-           background-color: $bf_light_mint;
-         }
-         &.act {
-           background-color: $bf_aqua_dark;
-         }
-         &.referral {
-           background-color: $bf_light_grass;
-         }
-         .ion-lightbulb, .ion-arrow-return-left {
-           font-size: 60px;
-           color: white;
-           width: $d;
-           line-height: $d;
-           text-align: center;
-           vertical-align: middle;
-         }
-       }
-      .selection-title {
-        font-size: 36px;
-        font-weight: 600;
-        text-align: center;
-      }
-      .seminar-container {
-        max-width: 800px;
-        position: relative;
-        left: 50%;
-        @include transform(translateX(-50%));
-        .seminar-title {
-          margin-top: 0;
-          margin-bottom: 16px;
-          font-size: 60px;
-          letter-spacing: 2.5px;
-          text-align: center;
-        }
-        .column-title {
-          font-size: 24px;
-          font-weight: 600;
-        }
-        .course-description {
-          font-size: 16px;
-        }
-        .course-details-box {
-          border: 2px solid $med_light_grey;
-          border-radius: 4px;
-          padding: 16px;
-          h4, p {
-            margin: 0;
-          }
-          .session-change-label {
-            border-radius: 3px;
-            background-color: $bf_red;
-            color: white;
-            font-size: 12px;
-            padding: 3px 4px;
-          }
-          .session-title {
-            font-size: 18px;
-            font-weight: 600;
-          }
-          .session-detail {
-            font-size: 14px;
-            color: $blue_grey;
-          }
-          .session-detail-label {
-            font-weight: 600;
-            color: $content_grey;
-          }
-          .price {
-            font-weight: 700;
-            color: $bf_light_grass;
-          }
-        }
-        .referral-title {
-          font-weight: 600;
-          font-size: 18px;
-        }
-        .referral-text {
-          font-size: 18px;
-        }
-        .button-green {
-          top: 30px;
-          position: relative;
-          left: 25%;
-          @include transform(translateX(-50%));
-        }
-      }
+
     }
   }
 }

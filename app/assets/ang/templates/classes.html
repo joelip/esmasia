@@ -21,125 +21,17 @@
     </div>
   </nav>
   <div class="class-choice-container">
-    <aside class="selection-sidebar">
-      <a href="" class="sidebar-link" ng-class="{'selected': currentTab == 'SAT'}" ng-click="selectTab('SAT')">SAT Seminars</a>
-      <a href="" class="sidebar-link" ng-class="{'selected': currentTab == 'ACT'}" ng-click="selectTab('ACT')">ACT Seminars</a>
-      <a href="" class="sidebar-link" ng-class="{'selected': currentTab == 'Referral'}" ng-click="selectTab('Referral')">Referral Program</a>
+    <aside class="class-sidebar">
+      <div class="class-item" ng-repeat="class in classes" ng-click="selectSchool($index)" ng-class="{'selected': class.school === selected.school}">
+        <div class="class-item-container">
+          <h5 class="class-item-school">{{class.school}}</h5>
+          <h6 class="class-item-location">{{class.city}}</h6>
+          <i class="ion-chevron-right item-chevron"></i>
+        </div>
+      </div>
     </aside>
     <section class="selection-content">
-      <div class="seminar-container" ng-show="currentTab == 'SAT'">
-        <div class="seminar-holding">
-          <h1 class="seminar-title">SAT Seminars</h1>
-          <div class="row">
-            <div class="col-md-6">
-              <h4 class="column-title">About the course</h4>
-              <p class="course-description">
-                Unlike most test prep classes, ESM's SAT seminar uses two instructors. The instructors comprehensively identify each student's strengths and weaknesses and then provide one-on-one instruction for each student in every session in the areas each student needs most to boost his or her scores. To learn more about the mentors who will be teaching the courses, please visit <a ui-sref="mentors">our Mentor page</a>.
-              </p>
-            </div>
-            <div class="col-md-5 col-md-offset-1">
-              <h4 class="column-title">Course details</h4>
-              <div class="course-details-box">
-                <h4 class="session-title">Session One <span class="session-change-label">New price</span></h4>
-                <p class="session-detail">
-                  <span class="session-detail-label">Date: </span>
-                  September 2 to October 7
-                </p>
-                <p class="session-detail">
-                  <span class="session-detail-label">Session Day: </span>
-                  Tuesday, 6:30-9:00pm
-                </p>
-                <p class="session-detail">
-                  <span class="session-detail-label">Enrollment Fee: </span>
-                  <span class="price">$799</span>
-                </p>
-                <h4 class="session-title" style="padding-top: 12px">Session Two</h4>
-                <p class="session-detail">
-                  <span class="session-detail-label">Date: </span>
-                  October 28 to December 2
-                </p>
-                <p class="session-detail">
-                  <span class="session-detail-label">Session Day: </span>
-                  Tuesday
-                </p>
-                <p class="session-detail">
-                  <span class="session-detail-label">Enrollment Fee: </span>
-                  <span class="price">$899</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <a class="button-green" ng-click="showModal('SAT')" ng-hide="currentTab == 'Referral'">
-            <i class="ion-chevron-right"></i>
-            enroll in sat seminar
-          </a>
-        </div>
-      </div>
-      <div class="seminar-container" ng-show="currentTab == 'ACT'">
-        <div class="seminar-holding">
-          <h1 class="seminar-title">ACT Seminars</h1>
-          <div class="row">
-            <div class="col-md-6">
-              <h4 class="column-title">About the course</h4>
-              <p class="course-description">
-                Unlike most test prep classes, ESM's ACT seminar uses two instructors. The instructors comprehensively identify each student's strengths and weaknesses and then provide one-on-one instruction for each student in every session in the areas each student needs most to boost his or her scores. To learn more about the mentors who will be teaching the courses, please visit <a ui-sref="mentors">our Mentor page</a>.
-              </p>
-            </div>
-            <div class="col-md-5 col-md-offset-1">
-              <h4 class="column-title">Course details</h4>
-              <div class="course-details-box">
-                <h4 class="session-title">Session One <span class="session-change-label">New dates and price</span></h4>
-                <p class="session-detail">
-                  <span class="session-detail-label">Date: </span>
-                  August 20 to September 10
-                </p>
-                <p class="session-detail">
-                  <span class="session-detail-label">Session Day: </span>
-                  Wednesday
-                </p>
-                <p class="session-detail">
-                  <span class="session-detail-label">Enrollment Fee: </span>
-                  <span class="price">$599</span>
-                </p>
-                <h4 class="session-title" style="padding-top: 12px">Session Two</h4>
-                <p class="session-detail">
-                  <span class="session-detail-label">Date: </span>
-                  November 5 to December 10
-                </p>
-                <p class="session-detail">
-                  <span class="session-detail-label">Session Day: </span>
-                  Wednesday
-                </p>
-                <p class="session-detail">
-                  <span class="session-detail-label">Enrollment Fee: </span>
-                  <span class="price">$799</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <a class="button-green" ng-click="showModal('ACT')" ng-hide="currentTab == 'Referral'">
-            <i class="ion-chevron-right"></i>
-            enroll in act seminar
-          </a>
-        </div>
-      </div>
-      <div class="seminar-container" ng-show="currentTab == 'Referral'">
-        <div class="main-icon referral">
-          <i class="ion-arrow-return-left"></i>
-        </div>
-        <h3 class="selection-title">Referral Program</h3>
-        <p class="referral-text">
-          ESM's Referral Program rewards both parents and students if they refer a student who registers for any of our programs.
-        </p>
-        <h5 class="referral-title">Parents</h5>
-        <p class="referral-text">
-          $50 off the price of enrollment (or a $50 refund if your student has registered). The referred student is provided with the same discount.
-        </p>
-        <h5 class="referral-title">Students</h5>
-        <p class="referral-text">
-          $15 gift card to venues around the area such as Chipotle, Jamba, Starbucks, Pinkberry or a $15 Visa gift card for any student referred.
-        </p>
-      </div>
+      <h3 class="selection-title">Fall Courses at {{selected.school}}</h3>
     </section>
   </div>
 </section>

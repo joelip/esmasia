@@ -9,7 +9,44 @@ app.controller 'StaticHomeCtrl', ['$scope', '$state', ($scope, $state) ->
 
 app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope, $state, Enrollment) ->
 
-  $scope.currentTab = 'SAT'
+  $scope.classes = [
+    {
+      school: "Yokohoma Int'l School",
+      city: "Tokyo"
+    },
+    {
+      school: "Saint Maur",
+      city: "Tokyo"
+    },
+    {
+      school: "Saint Mary's",
+      city: "Tokyo"
+    },
+    {
+      school: "Seisen",
+      city: "Tokyo"
+    },
+    {
+      school: "Singapore American School",
+      city: "Singapore"
+    },
+    {
+      school: "British Manila School",
+      city: "Manila"
+    },
+    {
+      school: "Int'l School Manila",
+      city: "Manila"
+    }
+  ]
+
+  $scope.selected = {
+    school: "Yokohoma Int'l School",
+    city: "Tokyo"
+  }
+
+  $scope.selectSchool = (i) ->
+    $scope.selected = $scope.classes[i]
 
   $scope.goHome = ->
     $state.go('home')
