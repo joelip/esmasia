@@ -1,5 +1,17 @@
 @import "color";
 @import "buttons";
+@import "bourbon";
+@import "mixins";
+
+// Sidebar colors
+$bg_sidebar: #53637A;
+$brdr_sidebar: #5E708A;
+// unselected
+$up_text: #97EFDC;
+$us_text: #1D98A0;
+// selected
+$ss_text: #F5F7FA;
+$sbg_color: #27CDD8;
 
 #mentor-info {
   position: absolute;
@@ -16,99 +28,62 @@
       position: relative;
       width: 30%;
       height: 100%;
-      background-color: transparent;
-      float: left;    
-      .mentor-box {
+      background-color: $bg_sidebar;
+      float: left;
+      .mentor-item {
         position: relative;
-        width: 50%;
-        height: calc(100% / 3);
-        display: inline-block;
-        .odd {
-          background-color: rgba(255,255,255,0.8);
-        }
-        .even {
-          background-color: rgba(245,247,250,0.8);
-        }
-        .box-content {
-          $d: 100px;
-          @include transition(all 0.5s linear);
-          height: 100%;
-          cursor: pointer;
-          &:hover {
-            background-color: white;
-          }
-          .mentor-name {
-            position: relative;
-            top: 15%;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 1;
-            text-align: center;
-          }
-          .initial {
+        height: calc(100% / 5);
+        background-color: $bg_sidebar;
+        border-bottom: 1px solid $brdr_sidebar;
+        cursor: pointer;
+        .mentor-item-container {
+          position: relative;
+          top: 50%;
+          @include transform(translateY(-50%));
+          padding-left: 36px;
+          .mentor-item-name, .item-chevron {
             margin: 0;
-            color: $base_blue;
-            font-size: 72px;
-            line-height: $d;
-            width: $d;
-            @include transform(translate(-5px,-5px));
-            vertical-align: middle;
-            text-align: center;
-            font-weight: 400;
+            font-size: 20px;
+            @include anti-alias;
+            color: $up_text;
           }
-          .mentor-photo {
-            position: relative;
-            top: 10%;
-            height: $d;
-            width: $d;
-            margin-left: auto;
-            margin-right: auto;
-            display: block; 
-            border-radius: 50%;
-            border: 4px solid $base_blue;
+          .mentor-item-photo {
+            @include circle(50px);
           }
-        }
-      }  
-    }
-    .mentor-bio {
-      position: relative;
-      width: 70%;
-      height: 100%;
-      background-color: #F5F7FA;
-      padding: 50px;
-      float: right;
-      h2 {
-        margin-top: 0;
-        font-size: 48px;
-        letter-spacing: 2.5px;
-        font-weight: 600;
-      }
-      h4 {
-        font-size: 24px;
-        letter-spacing: 0.25px;
-        color: rgb(170,178,189);
-      }
-      p {
-        color: $dark_grey;
-      } 
-      .button-blue {
-        position: relative;
-        top: 24px;
-        margin-right: auto;
-        margin-left: auto;
-        display: block;
-        max-width: 330px;
-        .ion-chevron-right {
-          font-size: 20px;
-          @include transform(translate(0,1px));
-          margin-right: 16px;
-          @include transition(transform 0.15s linear);
+          .item-chevron {
+            position: absolute;
+            right: 44px;
+            top: 50%;
+            @include transform(translate3d(0,-50%,0));
+            @include transition(transform 0.1s linear);
+          }
         }
         &:hover {
-          .ion-chevron-right {
-            @include transform(translate(6px,1px));
+          .item-chevron {
+            @include transform(translate3d(8px,-50%,0));
           }
         }
+        &.selected {
+          background-color: $sbg_color;
+          .mentor-item-name, .item-chevron {
+            color: white;
+          }
+        }
+      }
+    }
+    .mentor-spotlight {
+      width: 70%;
+      height: 100%;
+      position: relative;
+      background-color: #F5F7FA;
+      padding: 48px 60px 60px 60px;
+      float: right;
+      .spotlight-name {
+        font-size: 36px;
+      }
+      .spotlight-bio {
+        font-size: 16px;
+        color: $icon_grey;
       }
     }
   }

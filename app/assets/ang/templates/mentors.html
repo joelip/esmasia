@@ -19,21 +19,17 @@
   </nav>
   <div class="mentor-container">
     <aside class="mentor-sidebar">
-      <div class="mentor-box" ng-repeat="m in mentors">
-        <div third-class="{{$index}}" class="box-content" ng-click="setMentorSpotlight(m)">
-          <img ng-src="{{m.photoUrl}}" ng-hide="m.photoUrl == undefined" class="mentor-photo">
-          <div class="mentor-photo" ng-hide="m.photoUrl != undefined">
-            <h1 class="initial">{{m.name | initial}}</h1>
-          </div>
-          <h6 class="mentor-name">{{m.name}}</h6>
+      <div class="mentor-item" ng-repeat="mentor in mentors" ng-click="setMentorSpotlight($index)" ng-class="{'selected': mentor.name === mentorSpotlight.name}">
+        <div class="mentor-item-container">
+          <span class="mentor-item-photo"></span>
+          <span class="mentor-item-name">{{mentor.name}}</span>
+          <i class="ion-chevron-right item-chevron"></i>
         </div>
       </div>
     </aside>
-    <section class="mentor-bio">
-      <h2>{{mentorSpotlight.name}}</h2>
-      <h4>{{mentorSpotlight.location}}</h4>
-      <div class="bio" ng-bind-html="mentorSpotlight.bio"></div>
-      <a href="mailto:info@esmcollege.com" class="button-blue"><i class="ion-chevron-right"></i> request information</a>
+    <section class="mentor-spotlight">
+      <h2 class="spotlight-name">{{mentorSpotlight.name}}</h2>
+      <div class="spotlight-bio" ng-bind-html="mentorSpotlight.bio"></div>
     </section>
   </div>
 </div>
