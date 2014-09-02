@@ -31,7 +31,27 @@
       </div>
     </aside>
     <section class="selection-content">
-      <h3 class="selection-title">Fall Courses at {{selected.school}}</h3>
+      <div class="course-list">
+        <h3 class="selection-title">Fall Courses at {{selected.school}}</h3>
+        <div class="course-item" ng-repeat="course in selected.classes" 
+        ng-class="{
+          'top': $index === 0,
+          'bottom': $index === (selected.classes.length - 1)
+        }">
+          <div class="course-item-container">
+            <h4 class="course-title">{{course.title}}</h4>
+            <p class="course-dates">
+              <i class="ion-calendar"></i>
+              {{course.dates}}
+            </p>
+          </div>  
+          <span class="course-price">{{course.price}}</span>
+        </div>
+      </div>
+      <i class="ion-chevron-down hover-chevron floating" ng-show="selected.classes.length > 4"></i>
+      <a class="button-blue button-register" ng-click="triggerRegistration()">
+        Register at {{selected.school}}
+      </a> 
     </section>
   </div>
 </section>

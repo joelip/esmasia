@@ -12,38 +12,255 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
   $scope.classes = [
     {
       school: "Yokohoma Int'l School",
-      city: "Tokyo"
+      city: "Tokyo",
+      classes: [
+        {
+          title: "6-Week SAT Course",
+          dates: "September 1 - October 7",
+          price:  "$950"
+        },
+        {
+          title: "8-Week Hybrid SAT & ACT",
+          dates: "October 13 - November 10 (no class Oct. 27)",
+          price:  "$950"
+        },
+        {
+          title: "SAT 5-Day Intensive Course",
+          dates: "October 27 - October 31",
+          price:  "$650"
+        },
+        {
+          title: "ACT 5-Day Intensive Course",
+          dates: "October 27 - October 31",
+          price:  "$650"
+        },
+        {
+          title: "PSAT 1-Day Seminar",
+          dates: "October 6",
+          price:  "$200"
+        }
+      ]
     },
     {
       school: "Saint Maur",
-      city: "Tokyo"
+      city: "Tokyo",
+      classes: [
+        {
+          title: "SAT Diagnostic",
+          dates: "TBD",
+          price:  "FREE"
+        },
+        {
+          title: "SAT 5-Day Intensive Course",
+          dates: "October 20 - October 24",
+          price:  "$650"
+        }
+      ]
     },
     {
       school: "Saint Mary's",
-      city: "Tokyo"
+      city: "Tokyo",
+      classes: [
+        {
+          title: "SAT Diagnostic Exam",
+          dates: "September 6",
+          price:  "FREE"
+        },
+        {
+          title: "ACT Diagnostic Exam",
+          dates: "September 6",
+          price:  "FREE"
+        },
+        {
+          title: "SAT 5-Day Intensive Course",
+          dates: "October 22 - October 26 (no classes 10/25)",
+          price:  "$750"
+        },
+        {
+          title: "ACT 5-Day Intensive Course",
+          dates: "October 22 - October 26 (no classes 10/25)",
+          price:  "$750"
+        },
+        {
+          title: "5-week SAT Course",
+          dates: "TBD",
+          price:  "$750"
+        }
+      ]
     },
     {
       school: "Seisen",
-      city: "Tokyo"
+      city: "Tokyo",
+      classes: [
+        {
+          title: "SAT Diagnostic Exam",
+          dates: "September 6",
+          price: "FREE"
+        },
+        {
+          title: "ACT Diagnostic Exam",
+          dates: "TBD",
+          price: "FREE"
+        },
+        {
+          title: "SAT 5-Day Intensive Course",
+          dates: "October 22 - 26",
+          price: "$650"
+        },
+        {
+          title: "ACT 5-Day Intensive Course",
+          dates: "October 22 - 26",
+          price: "$650"
+        },
+        {
+          title: "8-week SAT Course",
+          dates: "TBD",
+          price: "$950"
+        }
+      ]
+    },
+    {
+      school: "Tokyo American Club",
+      city: "Tokyo",
+      classes: [
+        {
+          title: "SAT Diagnostic Exam",
+          dates: "TBD",
+          price:  "FREE"
+        },
+        {
+          title: "ACT Diagnostic Exam",
+          dates: "TBD",
+          price:  "FREE"
+        },
+        {
+          title: "SSAT Diagnostic Exam",
+          dates: "TBD",
+          price:  "FREE"
+        },
+        {
+          title: "1-Day SAT Cram",
+          dates: "TBD",
+          price:  "$150"
+        },
+        {
+          title: "1-Day ACT Cram",
+          dates: "TBD",
+          price:  "$150"
+        },
+        {
+          title: "SAT 5-Day Intensive Course",
+          dates: "October 11 - 14",
+          price: "$500"
+        },
+        {
+          title: "ACT 5-Day Intensive Course",
+          dates: "October 11 - 14",
+          price: "$500"
+        },
+        {
+          title: "SSAT 5-Day Intensive Course",
+          dates: "October 11 - 14",
+          price: "$500"
+        },
+        {
+          title: "8-week Hybrid SAT & ACT Course",
+          dates: "TBD",
+          price: "$750"
+        },        
+        {
+          title: "6-week SAT Course",
+          dates: "TBD",
+          price: "$950"
+        }
+      ]
     },
     {
       school: "Singapore American School",
-      city: "Singapore"
+      city: "Singapore",
+      classes: [
+        {
+          title: "SAT Diagnostic Exam",
+          dates: "TBD",
+          price:  "FREE"
+        },
+        {
+          title: "ACT Diagnostic Exam",
+          dates: "TBD",
+          price:  "FREE"
+        },
+        {
+          title: "SSAT Diagnostic Exam",
+          dates: "TBD",
+          price:  "FREE"
+        },
+        {
+          title: "1-Day PSAT Cram",
+          dates: "TBD",
+          price:  "SGD $250"
+        },
+        {
+          title: "1-Day ACT Cram",
+          dates: "TBD",
+          price:  "SGD $250"
+        },
+        {
+          title: "SAT 5-Day Intensive Course",
+          dates: "October 11 - 14",
+          price: "SGD $1150"
+        },
+        {
+          title: "ACT 5-Day Intensive Course",
+          dates: "October 11 - 14",
+          price: "SGD $1150"
+        },
+        {
+          title: "SSAT 5-Day Intensive Course",
+          dates: "October 11 - 14",
+          price: "SGD $1150"
+        },
+        {
+          title: "8-week Hybrid SAT & ACT Course",
+          dates: "TBD",
+          price: "SGD $1350"
+        }
+      ]
     },
     {
       school: "British Manila School",
-      city: "Manila"
+      city: "Manila",
+      classes: [
+        {
+          title: "SAT Diagnostic Exam",
+          dates: "TBD",
+          price:  "FREE"
+        },
+        {
+          title: "4-week SAT Course",
+          dates: "TBD",
+          price: "TBD"
+        }
+      ]
     },
     {
       school: "Int'l School Manila",
-      city: "Manila"
+      city: "Manila",
+      classes: [
+        {
+          title: "SAT Diagnostic Exam",
+          dates: "TBD",
+          price:  "FREE"
+        },
+        {
+          title: "ACT Diagnostic Exam",
+          dates: "TBD",
+          price:  "FREE"
+        }
+      ]
     }
   ]
 
-  $scope.selected = {
-    school: "Yokohoma Int'l School",
-    city: "Tokyo"
-  }
+  $scope.selected = $scope.classes[0]
 
   $scope.selectSchool = (i) ->
     $scope.selected = $scope.classes[i]
@@ -51,9 +268,9 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
   $scope.goHome = ->
     $state.go('home')
 
-  $scope.showModal = (type) ->
+  $scope.triggerRegistration = ->
     $scope.enrollment = {}
-    $scope.enrollment.course_type = type
+    # $scope.enrollment.course_type = type
     $scope.showRegistration = true 
 
   $scope.selectTab = (tabName) ->

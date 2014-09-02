@@ -34,7 +34,7 @@ $sbg_color: #27CDD8;
       float: left;
       .class-item {
         position: relative;
-        height: calc(100% / 7);
+        height: calc(100% / 8);
         background-color: $bg_sidebar;
         border-bottom: 1px solid $brdr_sidebar;
         cursor: pointer;
@@ -44,7 +44,7 @@ $sbg_color: #27CDD8;
           @include transform(translateY(-50%));
           .class-item-school, .item-chevron {
             margin: 0;
-            font-size: 20px;
+            font-size: 16px;
             @include anti-alias;
             color: $up_text;
           }
@@ -54,7 +54,7 @@ $sbg_color: #27CDD8;
           .class-item-location {
             margin: 4px auto;
             padding-left: 36px;
-            font-size: 16px;
+            font-size: 12px;
             color: $us_text;
             @include anti-alias;
           }
@@ -87,9 +87,60 @@ $sbg_color: #27CDD8;
       height: 100%;
       position: relative;
       background-color: #F5F7FA;
-      padding: 48px 60px 60px 60px;
+      padding: 48px 60px 108px 60px;
       float: right;
-
+      overflow-y: scroll;
+      box-sizing: border-box;
+      .course-list {
+        .course-item {
+          position: relative;
+          background-color: white;
+          padding: 16px 24px;
+          border-bottom: 1px solid $ss_text;
+          .course-item-container {
+            position: relative;
+            top: 50%;
+            .course-title {
+              font-size: 24px;
+              color: $bg_sidebar;
+            }
+            .course-dates {
+              color: $bf_orange_red;
+            }
+          }
+          .course-price {
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            color: $bf_light_grass;
+            font-size: 36px;
+            right: 24px;           
+          }
+          &.top {
+            border-radius: 6px 6px 0 0;
+          }
+          &.bottom {
+            border-radius: 0 0 6px 6px;
+          }
+        }
+      }
+      .hover-chevron {
+        font-size: 24px;
+        color: $dark_grey;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+        position: fixed;
+        left: 65%;
+        opacity: 1;
+        // @include transform(translate3d(-50%,0,0));
+        bottom: 36px;
+        z-index: 200;
+      }
+      .button-register {
+        position: relative;
+        left: 25%;
+        top: 36px;
+        @include transform(translateX(-25%));
+      }
     }
   }
 }
