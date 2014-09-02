@@ -159,22 +159,3 @@ app.controller 'MentorCtrl', ['$scope', '$sce', ($scope, $sce) ->
 
 
 ]
-
-app.controller 'PaymentCtrl', ['$scope', 'StripeCard', '$rootScope', '$cookies', ($scope,
-  StripeCard, $rootScope, $cookies) ->
-
-  $scope.date = {}
-
-  $scope.customer = {}
-
-  $scope.cost = $cookies.esm_session_price
-
-  $scope.submitCard = ->
-    if $scope.cost
-      $rootScope.$broadcast('processing')
-      $scope.customer.referred_by = $scope.referredBy
-      StripeCard.createPayment($scope.customer, $scope.date)
-    else
-      alert "There was an error determining the course you're paying for. Please contact ESM customer support at jlipper@esmcollege.com."
-
-]
