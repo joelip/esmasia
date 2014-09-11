@@ -87,11 +87,15 @@ $sbg_color: #27CDD8;
       height: 100%;
       position: relative;
       background-color: #F5F7FA;
-      padding: 48px 60px 108px 60px;
       float: right;
       overflow-y: scroll;
-      box-sizing: border-box;
+      display: block;
+      .selection-title {
+        margin-top: 48px;
+      }
       .course-list {
+        margin: 0 48px 132px 48px;
+        box-sizing: border-box;
         .course-item {
           position: relative;
           background-color: white;
@@ -107,13 +111,15 @@ $sbg_color: #27CDD8;
             .course-dates {
               color: $bf_orange_red;
             }
+            .course-times {
+              position: relative;
+              left: 1%;
+              color: #0DA7E8;
+            }
           }
           .course-price {
-            position: absolute;
-            top: 50%;
-            @include transform(translateY(-50%));
             color: $bf_light_grass;
-            font-size: 36px;
+            font-size: 20px;
             right: 24px;           
           }
           &.top {
@@ -136,10 +142,11 @@ $sbg_color: #27CDD8;
         z-index: 200;
       }
       .button-register {
-        position: relative;
-        left: 25%;
-        top: 36px;
-        @include transform(translateX(-25%));
+        position: fixed;
+        bottom: 24px;
+        left: 75%;
+        @include transform(translateX(-80%));
+        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
       }
     }
   }

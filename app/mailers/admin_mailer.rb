@@ -4,13 +4,7 @@ class AdminMailer < ActionMailer::Base
   def registered_student(enrollment)
   	@enrollment = enrollment
 
-  	mail to: 'downing.billy@gmail.com', subject: "#{@enrollment.student_full_name} has just enrolled with ESM's ACT Course"
+  	mail to: 'kpope@esmcollege.com', subject: "#{@enrollment.student_full_name} has just enrolled in a course"
   end
-
-  def successful_payment(email, referred_by)
-    @referred_by = referred_by
-  	@email = email
-
-  	mail to: 'downing.billy@gmail.com', subject: "Successful payment by #{@email}"
-  end
+  
 end

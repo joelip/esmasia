@@ -40,18 +40,22 @@
         }">
           <div class="course-item-container">
             <h4 class="course-title">{{course.title}}</h4>
-            <p class="course-dates">
-              <i class="ion-calendar"></i>
-              {{course.dates}}
+            <p>
+              <span class="course-dates">
+                <i class="ion-calendar"></i>
+                {{course.dates}}
+              </span>
+              <span class="course-times" ng-hide="course.time === undefined">
+                <i class="ion-clock"></i>
+                {{course.time}}
+              </span>
             </p>
+            <span class="course-price" ng-hide="!course.price">{{course.price}}</span>
+            <button type="button" class="button-register-sm" ng-click="setSelectedCourse(course)">Register</button>
           </div>  
-          <span class="course-price">{{course.price}}</span>
         </div>
       </div>
       <i class="ion-chevron-down hover-chevron floating" ng-show="selected.classes.length > 4"></i>
-      <a class="button-blue button-register" ng-click="triggerRegistration()">
-        Register at {{selected.school}}
-      </a> 
     </section>
   </div>
 </section>

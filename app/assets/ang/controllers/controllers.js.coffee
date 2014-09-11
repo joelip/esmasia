@@ -12,48 +12,55 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
   $scope.classes = [
     {
       school: "Yokohoma Int'l School",
-      city: "Tokyo",
+      city: "Yokohoma",
       classes: [
         {
-          title: "6-Week SAT Course",
-          dates: "September 1 - October 7",
-          price:  "$950"
+          title: "5-Week SAT Course",
+          dates: "September 8 - October 6",
+          time:  "Mondays from 4-8pm",
+          price:  "JPY 80,000"
         },
         {
           title: "8-Week Hybrid SAT & ACT",
-          dates: "October 13 - November 10 (no class Oct. 27)",
-          price:  "$950"
+          dates: "October 6 - December 8",
+          time:  "Mondays from 4-7pm",
+          price:  "JPY 95,000"
         },
         {
           title: "SAT 5-Day Intensive Course",
           dates: "October 27 - October 31",
-          price:  "$650"
+          time:  "Every day 9am-12pm",
+          price:  "JPY 65,000"
         },
         {
           title: "ACT 5-Day Intensive Course",
           dates: "October 27 - October 31",
-          price:  "$650"
+          time:  "Every day 1-4pm",
+          price:  "JPY 65,000"
         },
         {
           title: "PSAT 1-Day Seminar",
           dates: "October 6",
-          price:  "$200"
+          time:  "Mondays from 4-8pm",
+          price:  "JPY 20,000"
         }
       ]
     },
     {
       school: "Saint Maur",
-      city: "Tokyo",
+      city: "Yokohoma",
       classes: [
         {
           title: "SAT Diagnostic",
           dates: "TBD",
-          price:  "FREE"
+          time:  "TBD",
+          price:  undefined
         },
         {
           title: "SAT 5-Day Intensive Course",
           dates: "October 20 - October 24",
-          price:  "$650"
+          time: "Every day 10am-1pm"
+          price:  "JPY 65,000"
         }
       ]
     },
@@ -62,29 +69,16 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
       city: "Tokyo",
       classes: [
         {
-          title: "SAT Diagnostic Exam",
-          dates: "September 6",
-          price:  "FREE"
-        },
-        {
-          title: "ACT Diagnostic Exam",
-          dates: "September 6",
-          price:  "FREE"
-        },
-        {
           title: "SAT 5-Day Intensive Course",
           dates: "October 22 - October 26 (no classes 10/25)",
-          price:  "$750"
+          time:  "Every day 9am-1pm",
+          price:  "JPY 75,000"
         },
         {
           title: "ACT 5-Day Intensive Course",
           dates: "October 22 - October 26 (no classes 10/25)",
-          price:  "$750"
-        },
-        {
-          title: "5-week SAT Course",
-          dates: "TBD",
-          price:  "$750"
+          time:  "Every day 1pm-5pm",
+          price: "JPY 75,000"
         }
       ]
     },
@@ -93,29 +87,16 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
       city: "Tokyo",
       classes: [
         {
-          title: "SAT Diagnostic Exam",
-          dates: "September 6",
-          price: "FREE"
-        },
-        {
-          title: "ACT Diagnostic Exam",
-          dates: "TBD",
-          price: "FREE"
-        },
-        {
           title: "SAT 5-Day Intensive Course",
           dates: "October 22 - 26",
-          price: "$650"
-        },
-        {
-          title: "ACT 5-Day Intensive Course",
-          dates: "October 22 - 26",
-          price: "$650"
+          time:  "Every day 9am-12pm",
+          price: "JPY 75,000"
         },
         {
           title: "8-week SAT Course",
           dates: "TBD",
-          price: "$950"
+          time:  "4pm-7pm",
+          price: "JPY 100,000"
         }
       ]
     },
@@ -126,102 +107,114 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
         {
           title: "SAT Diagnostic Exam",
           dates: "TBD",
-          price:  "FREE"
+          time:  undefined,
+          price: undefined
         },
         {
           title: "ACT Diagnostic Exam",
           dates: "TBD",
-          price:  "FREE"
+          time:  undefined,
+          price: undefined
         },
         {
           title: "SSAT Diagnostic Exam",
           dates: "TBD",
-          price:  "FREE"
+          time:  undefined,
+          price: undefined
         },
         {
           title: "1-Day SAT Cram",
           dates: "TBD",
-          price:  "$150"
+          time:  undefined,
+          price: "$150"
         },
         {
           title: "1-Day ACT Cram",
           dates: "TBD",
+          time:  undefined,
           price:  "$150"
         },
         {
           title: "SAT 5-Day Intensive Course",
           dates: "October 11 - 14",
+          time:  undefined,
           price: "$500"
         },
         {
           title: "ACT 5-Day Intensive Course",
           dates: "October 11 - 14",
+          time:  undefined,
           price: "$500"
         },
         {
           title: "SSAT 5-Day Intensive Course",
           dates: "October 11 - 14",
+          time:  undefined,
           price: "$500"
         },
         {
           title: "8-week Hybrid SAT & ACT Course",
           dates: "TBD",
+          time:  undefined,
           price: "$750"
         },        
         {
           title: "6-week SAT Course",
           dates: "TBD",
+          time:  undefined,
           price: "$950"
         }
       ]
     },
     {
-      school: "Singapore American School",
+      school: "Singapore American Club",
       city: "Singapore",
       classes: [
-        {
-          title: "SAT Diagnostic Exam",
-          dates: "TBD",
-          price:  "FREE"
-        },
+        # {
+        #   title: "SAT Diagnostic Exam",
+        #   dates: "TBD",
+        #   price:  undefined
+        # },
         {
           title: "ACT Diagnostic Exam",
-          dates: "TBD",
-          price:  "FREE"
+          dates: "Sunday, October 19",
+          time:  "5:30pm-8pm",
+          price:  undefined
         },
         {
           title: "SSAT Diagnostic Exam",
-          dates: "TBD",
-          price:  "FREE"
+          dates: "Sunday, October 12",
+          time:  "3pm-7pm",
+          price:  undefined
         },
         {
           title: "1-Day PSAT Cram",
-          dates: "TBD",
-          price:  "SGD $250"
-        },
-        {
-          title: "1-Day ACT Cram",
-          dates: "TBD",
+          dates: "Sunday, October 5",
+          time:  "10am-2pm",
           price:  "SGD $250"
         },
         {
           title: "SAT 5-Day Intensive Course",
-          dates: "October 11 - 14",
+          dates: "October 20 – 24",
+          time:  "Every day 10am-2pm",
           price: "SGD $1150"
         },
         {
           title: "ACT 5-Day Intensive Course",
-          dates: "October 11 - 14",
+          dates: "October 20 – 24",
+          time:  "Every day 3pm-7pm",
           price: "SGD $1150"
         },
         {
           title: "SSAT 5-Day Intensive Course",
-          dates: "October 11 - 14",
+          dates: "October 20 – 24",
+          time:  "Every day 10am-2pm",
           price: "SGD $1150"
         },
         {
           title: "8-week Hybrid SAT & ACT Course",
-          dates: "TBD",
+          dates: "Oct 12 – Nov 2 & Nov 16 – Dec 7",
+          time:  "Sundays from 10am-2pm"
           price: "SGD $1350"
         }
       ]
@@ -233,7 +226,7 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
         {
           title: "SAT Diagnostic Exam",
           dates: "TBD",
-          price:  "FREE"
+          price:  undefined
         },
         {
           title: "4-week SAT Course",
@@ -249,12 +242,22 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
         {
           title: "SAT Diagnostic Exam",
           dates: "TBD",
-          price:  "FREE"
+          price:  undefined
         },
         {
           title: "ACT Diagnostic Exam",
           dates: "TBD",
-          price:  "FREE"
+          price:  undefined
+        },
+        {
+          title: "SAT Prep Course",
+          dates: "TBD",
+          price:  undefined
+        },
+        {
+          title: "ACT Prep Course",
+          dates: "TBD",
+          price:  undefined
         }
       ]
     }
@@ -268,9 +271,13 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
   $scope.goHome = ->
     $state.go('home')
 
-  $scope.triggerRegistration = ->
-    $scope.enrollment = {}
-    # $scope.enrollment.course_type = type
+  $scope.setSelectedCourse = (course) ->
+    $scope.enrollment = {
+      course_date: course.dates,
+      course_type: course.title,
+      course_venue: $scope.selected.school 
+    }
+    # alert "Current enrollment object: " + JSON.stringify($scope.enrollment)
     $scope.showRegistration = true 
 
   $scope.selectTab = (tabName) ->

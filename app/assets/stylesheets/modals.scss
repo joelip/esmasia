@@ -64,6 +64,11 @@
         border: 2px solid #FFED24;
       }
     }
+    .registration-byline {
+      font-style: italic;
+      color: $snapchat_dark;
+      margin-bottom: 0;
+    }
     .left-registration {
       position: absolute;
       left: 0;
@@ -113,6 +118,9 @@
         font-size: 16px;
         letter-spacing: 0px;
         color: #E6E9ED;
+      }
+      .registration-course-dates {
+        color: $bf_light_orange;
       }
       .button-enroll {
         height: 48px;

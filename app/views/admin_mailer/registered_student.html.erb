@@ -1,23 +1,20 @@
-<p>Hi Billy,</p>
+<p>Hi Kevin,</p>
 
-<p><%= @enrollment.student_full_name %> has just enrolled for the July 30 ACT course.</p>
+<p>This is an automated email confirming an ESM Asia registration.</p>
+
+<p><%= @enrollment.student_full_name %> has just enrolled at <%= @enrollment.course_venue %> for the <%= @enrollment.course_date %> <%= @enrollment.course_type %>.</p>
 
 <p>Here is their enrollment info:</p>
 
 <p><b>Date of birth:</b> <%= @enrollment.dob %></p>
 <p><b>Grade:</b> <%= @enrollment.grade %></p>
 <p><b>Home Address:</b> <%= @enrollment.home_address %></p>
-<p><b>City:</b> <%= @enrollment.city %></p>
-<p><b>State:</b> <%= @enrollment.state %></p>
+<p><b>City / Zip Code / Country:</b> <%= @enrollment.additional_address_info %></p>
 <p><b>Parent full name:</b> <%= @enrollment.parent_full_name %></p>
 <p><b>Parent email:</b> <%= @enrollment.parent_email %></p>
 <p><b>Student email:</b> <%= @enrollment.student_email %></p>
 <p><b>Student high school:</b> <%= @enrollment.student_high_school %></p>
 <p><b>Student mobile number:</b> <%= @enrollment.student_mobile_number %></p>
-<p><b>Class type (ACT or SAT):</b> <%= @enrollment.course_type %></p>
-<p><b>Course Date:</b> <%= @enrollment.course_date %></p>
-
-<p>This email only means that their enrollment went through successfully. Stay tuned for a followup email which will confirm their payment was processed through Stripe.</p>
 
 <p>If there was an error, just reply to this email and I'll take a look.</p>
 

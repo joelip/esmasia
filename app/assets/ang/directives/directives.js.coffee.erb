@@ -60,15 +60,14 @@ app.directive 'successMsg', ['$rootScope', ($rootScope) ->
   restrict: 'A',
   link: (scope, element, attrs) ->
 
-    $rootScope.$on('successfulPayment', ->
+    $rootScope.$on 'registration:success', ->
       $('.registration-container').replaceWith('
         <div class="success-box">
-          <i class="ion-checkmark-circled"></i>
-          <p class="success-msg">Payment successfully processed. Email receipt sent.</p>
+          <h4>Succesful Registration</h4>
           <a href="/" class="success-home-link" reload-link>back to home</a>
         </div>
       ')
-    )
+
 ]
 
 # validation directives
@@ -161,3 +160,12 @@ app.directive 'underlineFadeIn', ->
         '-webkit-transform': 'translateY(-16px)'
     
     element.hover(onHover, offHover)
+
+app.directive 'dimOnScroll', ['$window', ($window) ->
+  restrict: 'C',
+  link: (scope, element, attrs) ->
+
+    $(window).on 'scroll', ->
+      element.css 'opacity', '0.2'
+
+]

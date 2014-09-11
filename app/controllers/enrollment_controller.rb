@@ -6,8 +6,7 @@ class EnrollmentController < ApplicationController
 
 	def create_enrollment
 		enrollment = Enrollment.create!(
-			city: 									params[:city],
-			state: 									params[:state],
+			additional_address_info:params[:additional_address_info],
 			grade: 									params[:grade],
 			dob: 										params[:dob],
 			home_address: 					params[:home_address],
@@ -18,7 +17,8 @@ class EnrollmentController < ApplicationController
 			student_high_school: 		params[:student_high_school],
 			student_mobile_number: 	params[:student_mobile_number],
 			course_type: 						params[:course_type],
-			course_date: 						params[:course_date]
+			course_date: 						params[:course_date],
+			course_venue: 					params[:course_venue]
 		)
 		if enrollment
 			c = cookies

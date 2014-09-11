@@ -4,12 +4,13 @@
 		<i class="ion-close-round close-icon"></i>
 		<span class="novecento-bold">close</span>
 	</a>
-	<div class="registration-container">
+	<div class="registration-container" success-msg>
 		<form name="testboost" class="row" ng-submit="submitEnrollment()">
 			<div class="col-lg-6 left-registration">
 				<h3 class="registration-title">
 					Registration
 				</h3>
+				<p class="registration-byline">No payment due at this time.</p>
 				<label class="registration-label-left">
 					student full name
 				</label>
@@ -48,17 +49,10 @@
 			</div>
 			<div class="col-lg-6 right-registration">
 				<h3 class="registration-title">
-					{{enrollment.course_type}} Seminar
+					{{enrollment.course_type}}
 				</h3>
 				<label class="registration-label-right" style="margin-bottom: 0">session date:</label>
-				<select ng-model="enrollment.course_date" ng-show="enrollment.course_type == 'SAT'">
-					<option value="Sept. 2 to Oct. 11">Sept. 2 to Oct. 7</option>
-					<option value="Oct. 28 to Dec. 2">Oct. 28 to Dec. 2</option>
-				</select>
-				<select ng-model="enrollment.course_date" ng-show="enrollment.course_type == 'ACT'">
-					<option value="Aug. 20 to Sept. 10">Aug. 20 to Sept. 10</option>
-					<option value="Nov. 5 to Dec. 10">Nov. 5 to Dec. 10</option>
-				</select>
+				<span class="registration-course-dates">{{enrollment.course_date}}</span>
 				<label class="registration-label-right">
 					parent full name
 				</label>
@@ -74,22 +68,12 @@
 				</label>
 				<br>
 				<input type="text" class="registration-input" ng-model="enrollment.home_address" required>
-				<div class="row grade-dob-input">
-					<div class="dob-group col-md-8" style="width: 60%; margin-right: 6.6%;">
-						<label class="registration-label-right dob-label">
-							city
-						</label>
-						<br>
-						<input type="text" class="registration-input" ng-model="enrollment.city" required>
-					</div>
-					<div class="grade-group col-md-4">
-						<label class="registration-label-right grade-label">
-							state
-						</label>
-						<input type="text" class="registration-input" ng-model="enrollment.state" required>
-					</div>
-				</div>
-				<button type="submit" class="button-enroll"><i class="ion-chevron-right"></i> continue to payment</button>
+				<label class="registration-label-right dob-label">
+					city / country / zip code
+				</label>
+				<br>
+				<input type="text" class="registration-input" ng-model="enrollment.additional_address_info" required>
+				<button type="submit" class="button-enroll">confirm registration</button>
 			</div>
 		</form>
 	</div>
