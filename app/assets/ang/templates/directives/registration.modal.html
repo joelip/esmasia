@@ -15,37 +15,37 @@
 					student full name
 				</label>
 				<br>
-				<input type="text" class="registration-input" ng-model="enrollment.student_full_name" required>
+				<input type="text" name="student_full_name" class="registration-input" ng-model="enrollment.student_full_name" required>
 				<label class="registration-label-left">
 					student high school
 				</label>
 				<br>
-				<input type="text" class="registration-input" ng-model="enrollment.student_high_school"  required>
+				<input type="text" name="student_high_school" class="registration-input" ng-model="enrollment.student_high_school"  required>
 				<div class="row grade-dob-input">
 					<div class="dob-group col-md-8" style="width: 60%; margin-right: 6.6%;">
 						<label class="registration-label-left dob-label">
 							date of birth
 						</label>
 						<br>
-						<input type="text" class="registration-input" ng-model="enrollment.dob" placeholder="MM/DD/YYYY" required>
+						<input type="text" name="dob" class="registration-input" ng-model="enrollment.dob" placeholder="MM/DD/YYYY" required>
 					</div>
 					<div class="grade-group col-md-4">
 						<label class="registration-label-left grade-label">
 							grade
 						</label>
-						<input type="text" class="registration-input" ng-model="enrollment.grade" placeholder="9-12" required>
+						<input type="text" name="grade" class="registration-input" ng-model="enrollment.grade" placeholder="9-12" required>
 					</div>
 				</div>	
 				<label class="registration-label-left">
 					student mobile number
 				</label>
 				<br>
-				<input type="text" class="registration-input" ng-model="enrollment.student_mobile_number" required>
+				<input type="text" name="student_mobile_number" class="registration-input" ng-model="enrollment.student_mobile_number" required>
 				<label class="registration-label-left">
 					student email
 				</label>
 				<br>
-				<input type="email" class="registration-input" ng-model="enrollment.student_email" required>
+				<input type="email" name="student_email" class="registration-input" ng-model="enrollment.student_email" required>
 			</div>
 			<div class="col-lg-6 right-registration">
 				<h3 class="registration-title">
@@ -57,23 +57,23 @@
 					parent full name
 				</label>
 				<br>
-				<input type="text" class="registration-input" ng-model="enrollment.parent_full_name" required>
+				<input type="text" name="parent_full_name" class="registration-input" ng-model="enrollment.parent_full_name" required>
 				<label class="registration-label-right">
 					parent email
 				</label>
 				<br>
-				<input type="email" class="registration-input" ng-model="enrollment.parent_email" required>
+				<input type="email" name="parent_email" class="registration-input" ng-model="enrollment.parent_email" required>
 				<label class="registration-label-right">
 					home address
 				</label>
 				<br>
-				<input type="text" class="registration-input" ng-model="enrollment.home_address" required>
+				<input type="text" name="home_address" class="registration-input" ng-model="enrollment.home_address" required>
 				<label class="registration-label-right dob-label">
 					city / country / zip code
 				</label>
 				<br>
-				<input type="text" class="registration-input" ng-model="enrollment.additional_address_info" required>
-				<button type="submit" class="button-enroll">confirm registration</button>
+				<input type="text" name="additional_address_info" class="registration-input" ng-model="enrollment.additional_address_info" required>
+				<button type="submit" class="button-enroll" processing>confirm registration</button>
 			</div>
 		</form>
 	</div>

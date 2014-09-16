@@ -33,7 +33,7 @@ app.directive 'processing', ['$rootScope', ($rootScope) ->
   restrict: 'A',
   link: (scope, element, attrs) ->
 
-    $rootScope.$on('processing', ->
+    $rootScope.$on('registration:processing', ->
       element.css({
         'background-color': '#5D9CEC',
         'border-bottom': '4px solid #4A89DC'
@@ -61,8 +61,9 @@ app.directive 'successMsg', ['$rootScope', ($rootScope) ->
   link: (scope, element, attrs) ->
 
     $rootScope.$on 'registration:success', ->
-      $('.registration-container').replaceWith('
+      $('.registration-container').html('
         <div class="success-box">
+          <i class="ion-checkmark-circled"></i>
           <h4>Succesful Registration</h4>
           <a href="/" class="success-home-link" reload-link>back to home</a>
         </div>
@@ -91,40 +92,6 @@ app.directive 'validDate', ['$rootScope', ($rootScope) ->
         })
     )
 ]
-
-app.directive 'validCard', ->
-  restrict: 'A',
-  scope:
-    cardNum: '='
-  link: (scope, element, attrs) ->
-    element.on('blur', ->
-      if Stripe.card.validateCardNumber(scope.cardNum) is false
-        $('.card-number').css({
-          'border': '2px solid #E9573F'  
-        })
-        alert "Please enter valid card number."
-      else
-        $('.card-number').css({
-          'border': '2px solid #B8D9FF'  
-        })
-    )
-
-app.directive 'validCvc', ->
-  restrict: 'A',
-  scope:
-    vCvc: '='
-  link: (scope, element, attrs) ->
-    element.on('blur', ->
-      if Stripe.card.validateCVC(scope.vCvc) is false
-        $('.card-cvc').css({
-          'border': '2px solid #E9573F'  
-        })
-        alert "Please enter valid card cvc."
-      else
-        $('.card-cvc').css({
-          'border': '2px solid #B8D9FF'  
-        })
-    )
 
 app.directive 'thirdClass', ->
   restrict: 'A',

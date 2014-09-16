@@ -272,9 +272,12 @@ app.controller 'ClassSelectionCtrl', ['$scope', '$state', 'Enrollment', ($scope,
     $state.go('home')
 
   $scope.setSelectedCourse = (course) ->
+    # position of "course" or "seminar" in course title
+    coursePos = course.title.search(/(course|seminar)/i)
+
     $scope.enrollment = {
       course_date: course.dates,
-      course_type: course.title,
+      course_type: course.title.substring(0,coursePos),
       course_venue: $scope.selected.school 
     }
     # alert "Current enrollment object: " + JSON.stringify($scope.enrollment)

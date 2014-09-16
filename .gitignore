@@ -16,3 +16,6 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore my Personal Info
+/app/assets/javascripts/form_testing_script.js

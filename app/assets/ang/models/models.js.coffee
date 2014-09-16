@@ -15,12 +15,11 @@ app.factory 'Enrollment', ['$rootScope', '$http', '$window', ($rootScope, $http,
   wrapper = {
 
     createEnrollment: (enrollment) ->
+      $rootScope.$broadcast 'registration:processing'
 
       $http.post('/create_enrollment', enrollment)
         .success ->
-          $rootScope.$broadcast 'registration:success'
-          alert "succesful registration"
-          $window.location.href = '/'
+          $rootScope.$broadcast 'registration:success' 
         .error ->
           alert "There was an error saving your enrollment. Recheck your entries, and 
           refresh the page if needed."

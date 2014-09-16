@@ -136,3 +136,30 @@
     }
   }
 }
+
+.success-box {
+  position: relative;
+  top: 45%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @include transform(translateY(-50%));
+  .ion-checkmark-circled {
+    width: 100%;
+    font-size: 108px;
+    text-align: center;
+    color: $bf_dark_grass;
+    margin-bottom: 12px;
+    @include animation(expandOpen 0.3s ease-in-out);
+  }
+  h4 {
+    color: $bf_dark_grass;
+    text-align: center;
+  }
+  .success-home-link {
+    position: relative;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
