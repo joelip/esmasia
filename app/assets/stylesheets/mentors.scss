@@ -47,8 +47,10 @@ $sbg_color: #27CDD8;
             @include anti-alias;
             color: $up_text;
           }
-          .mentor-item-photo {
-            @include circle(50px);
+          .mentor-item-email {
+            font-size: 14px;
+            color: white;
+            @include anti-alias;
           }
           .item-chevron {
             position: absolute;
@@ -78,6 +80,9 @@ $sbg_color: #27CDD8;
       background-color: #F5F7FA;
       padding: 48px 60px 60px 60px;
       float: right;
+      .spotlight-photo {
+        @include circle(72px);
+      }
       .spotlight-name {
         font-size: 36px;
       }

@@ -299,7 +299,8 @@ app.controller 'MentorCtrl', ['$scope', '$sce', ($scope, $sce) ->
   $scope.mentors = [
     {
       name: 'Kevin Pope',
-      photoUrl: "https://esmtest.s3.amazonaws.com/lawrence_anicete.jpeg",
+      photoUrl: "http://esmtest.s3.amazonaws.com/kpopeportrait.jpg",
+      email: "kpope@esmcollege.com",
       bio: $sce.trustAsHtml("
         <p>
           Kevin Pope graduated from Yale University with a bachelor’s degree in Economics. At Yale, Kevin was a four-year 
@@ -321,7 +322,8 @@ app.controller 'MentorCtrl', ['$scope', '$sce', ($scope, $sce) ->
     },
     {
       name: 'Matt Segasture',
-      photoUrl: 'http://esmtest.s3.amazonaws.com/john_sheffield.jpg',
+      photoUrl: 'http://esmtest.s3.amazonaws.com/matt_segasture.jpg',
+      email: "msegasture@esmcollege.com",
       bio: $sce.trustAsHtml("
         <p>
           Matt Segasture graduated from the George Washington University in 2009 majoring in History and earning 
@@ -342,7 +344,8 @@ app.controller 'MentorCtrl', ['$scope', '$sce', ($scope, $sce) ->
     },
     {
       name: 'Wesley Waterman',
-      photoUrl: 'http://esmtest.s3.amazonaws.com/adam_allouche.jpg',
+      photoUrl: 'http://esmtest.s3.amazonaws.com/wes_waterman.jpg',
+      email: "wwaterman@esmcollege.com"
       bio: $sce.trustAsHtml("
         <p>
           Wes Waterman graduated from Amherst College with a Bachelor of Arts in Political Science and with a concentration in Mathematics. Wes was captain of the National Champion Men’s Tennis team and also an All-American. Wes has always been a hard worker on and off the court and is dedicated to helping students reach their full potential and get into the best “fit” University.
@@ -353,7 +356,8 @@ app.controller 'MentorCtrl', ['$scope', '$sce', ($scope, $sce) ->
     },
     {
       name: 'Matt Wright',
-      photoUrl: undefined,
+      photoUrl: 'http://esmtest.s3.amazonaws.com/matt_wright.jpg',
+      email: "mwright@esmcollege.com",
       bio: $sce.trustAsHtml("
         <p>
           Matt Wright graduated from Cornell University with bachelor degrees in Government and Asian Studies. While at Cornell, he undertook the FALCON Chinese and Japanese intensive language programs where he studied each language for one calendar year and also studied abroad in both China and Japan. After graduating, Matt participated in the Japan Exchange and Teaching (JET) Program where he taught English to a wide range of students from the pre-school to junior high level in rural Wakayama, Japan. During his three years in the program, Matt created a preparatory program at his local junior high school for a national English examination and was active in promoting international exchange programs for his students.
@@ -364,7 +368,8 @@ app.controller 'MentorCtrl', ['$scope', '$sce', ($scope, $sce) ->
     },
     {
       name: 'Tyler Henry Hung',
-      photoUrl: undefined,
+      photoUrl: 'http://esmtest.s3.amazonaws.com/henry_tyler_h.jpg',
+      email: "tyler@esmcollege.com",
       bio: $sce.trustAsHtml("
           <p>
             Tyler graduated from Cambridge (Christ’s College) with a B.A. (Honours) in Law and Natural Sciences, before embarking on further graduate legal studies in London.  Prior to his Bachelor’s, he earned and declined offers to study at medical schools in the UK. 

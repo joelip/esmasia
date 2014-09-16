@@ -21,14 +21,18 @@
     <aside class="mentor-sidebar">
       <div class="mentor-item" ng-repeat="mentor in mentors" ng-click="setMentorSpotlight($index)" ng-class="{'selected': mentor.name === mentorSpotlight.name}">
         <div class="mentor-item-container">
-          <span class="mentor-item-photo"></span>
           <span class="mentor-item-name">{{mentor.name}}</span>
+          <br>
+          <a ng-href="mailto:{{mentor.email}}" class="mentor-item-email">{{mentor.email}}</a>
           <i class="ion-chevron-right item-chevron"></i>
         </div>
       </div>
     </aside>
     <section class="mentor-spotlight">
-      <h2 class="spotlight-name">{{mentorSpotlight.name}}</h2>
+      <h2 class="spotlight-name">
+        <img ng-src="{{mentorSpotlight.photoUrl}}" class="spotlight-photo">
+        {{mentorSpotlight.name}}
+      </h2>
       <div class="spotlight-bio" ng-bind-html="mentorSpotlight.bio"></div>
     </section>
   </div>
